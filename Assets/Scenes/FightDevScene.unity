@@ -205,7 +205,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 40430844}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 10, y: 0, z: 20}
+  m_LocalPosition: {x: 10, y: 0.55, z: 20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -237,7 +237,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 307652223}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 10, y: 0, z: -20}
+  m_LocalPosition: {x: 10, y: 0.55, z: -20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -355,7 +355,7 @@ PrefabInstance:
     - target: {fileID: 2451991435252291592, guid: d67a904cb91e305408d055e6b0306b98,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.55
       objectReference: {fileID: 0}
     - target: {fileID: 2451991435252291592, guid: d67a904cb91e305408d055e6b0306b98,
         type: 3}
@@ -370,7 +370,7 @@ PrefabInstance:
     - target: {fileID: 2451991435252291592, guid: d67a904cb91e305408d055e6b0306b98,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.0012216417
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2451991435252291592, guid: d67a904cb91e305408d055e6b0306b98,
         type: 3}
@@ -380,7 +380,7 @@ PrefabInstance:
     - target: {fileID: 2451991435252291592, guid: d67a904cb91e305408d055e6b0306b98,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9999993
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2451991435252291592, guid: d67a904cb91e305408d055e6b0306b98,
         type: 3}
@@ -395,7 +395,7 @@ PrefabInstance:
     - target: {fileID: 2451991435252291592, guid: d67a904cb91e305408d055e6b0306b98,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -0.14
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2451991435252291592, guid: d67a904cb91e305408d055e6b0306b98,
         type: 3}
@@ -438,6 +438,11 @@ PrefabInstance:
       propertyPath: cooldown
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2451991435544946434, guid: d67a904cb91e305408d055e6b0306b98,
+        type: 3}
+      propertyPath: recoil
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 2451991435443124267, guid: d67a904cb91e305408d055e6b0306b98,
         type: 3}
       propertyPath: projectile
@@ -447,12 +452,17 @@ PrefabInstance:
     - target: {fileID: 2451991435443124267, guid: d67a904cb91e305408d055e6b0306b98,
         type: 3}
       propertyPath: muzzleVelocity.x
-      value: -50
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 2451991435443124267, guid: d67a904cb91e305408d055e6b0306b98,
         type: 3}
       propertyPath: cooldown
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2451991435443124267, guid: d67a904cb91e305408d055e6b0306b98,
+        type: 3}
+      propertyPath: recoil
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 2451991436436544656, guid: d67a904cb91e305408d055e6b0306b98,
         type: 3}
@@ -846,7 +856,7 @@ PrefabInstance:
     - target: {fileID: 2451991435252291592, guid: d67a904cb91e305408d055e6b0306b98,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.55
       objectReference: {fileID: 0}
     - target: {fileID: 2451991435252291592, guid: d67a904cb91e305408d055e6b0306b98,
         type: 3}
@@ -861,7 +871,7 @@ PrefabInstance:
     - target: {fileID: 2451991435252291592, guid: d67a904cb91e305408d055e6b0306b98,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.0012216417
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2451991435252291592, guid: d67a904cb91e305408d055e6b0306b98,
         type: 3}
@@ -871,7 +881,7 @@ PrefabInstance:
     - target: {fileID: 2451991435252291592, guid: d67a904cb91e305408d055e6b0306b98,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9999993
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2451991435252291592, guid: d67a904cb91e305408d055e6b0306b98,
         type: 3}
@@ -886,7 +896,7 @@ PrefabInstance:
     - target: {fileID: 2451991435252291592, guid: d67a904cb91e305408d055e6b0306b98,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -0.14
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2451991435252291592, guid: d67a904cb91e305408d055e6b0306b98,
         type: 3}
@@ -929,6 +939,11 @@ PrefabInstance:
       propertyPath: cooldown
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2451991435544946434, guid: d67a904cb91e305408d055e6b0306b98,
+        type: 3}
+      propertyPath: recoil
+      value: 10000
+      objectReference: {fileID: 0}
     - target: {fileID: 2451991435443124267, guid: d67a904cb91e305408d055e6b0306b98,
         type: 3}
       propertyPath: projectile
@@ -938,12 +953,17 @@ PrefabInstance:
     - target: {fileID: 2451991435443124267, guid: d67a904cb91e305408d055e6b0306b98,
         type: 3}
       propertyPath: muzzleVelocity.x
-      value: -50
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 2451991435443124267, guid: d67a904cb91e305408d055e6b0306b98,
         type: 3}
       propertyPath: cooldown
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2451991435443124267, guid: d67a904cb91e305408d055e6b0306b98,
+        type: 3}
+      propertyPath: recoil
+      value: 6000
       objectReference: {fileID: 0}
     - target: {fileID: 2451991436436544656, guid: d67a904cb91e305408d055e6b0306b98,
         type: 3}

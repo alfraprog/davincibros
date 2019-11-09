@@ -9,6 +9,7 @@ namespace TankComponents
 
         public GameObject projectile;
         public Vector2 muzzleVelocity;
+        public float recoil;
         public float cooldown;
 
         private float timeUntilReady = 0;
@@ -30,6 +31,8 @@ namespace TankComponents
 
                 instance.GetComponent<Rigidbody>().velocity = body.velocity + velocity;
                 instance.transform.position = transform.position;
+
+                body.AddForce(transform.rotation * Vector3.back * recoil, ForceMode.Impulse);
                 timeUntilReady = cooldown;
             } else if (timeUntilReady > 0)
             {
