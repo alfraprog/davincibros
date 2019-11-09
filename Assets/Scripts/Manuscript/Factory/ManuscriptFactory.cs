@@ -55,6 +55,6 @@ public class ManuscriptFactory
 
 	public WeaponManuscript WeaponFromSerializable(ManuscriptSerializable serializable)
 	{
-		return new WeaponManuscript();
+		return new WeaponManuscript(serializable);
 	}
 }
