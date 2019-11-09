@@ -1,4 +1,6 @@
 
+using UnityEngine;
+using System.IO;          
 using System;
 
 public class ManuscriptFactory
@@ -32,8 +34,8 @@ public class ManuscriptFactory
 
 		instance.title = serializable.title;
 		instance.description = serializable.description;
-		instance.imagePath = serializable.image;
-		instance.backgroundPath = serializable.background;
+		instance.imagePath =  "Manuscript/Images/" + serializable.image;
+		instance.backgroundPath = "Manuscript/Backgrounds/" + serializable.background;
 		return instance;
 	}
 

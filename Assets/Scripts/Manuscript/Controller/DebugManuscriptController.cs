@@ -10,7 +10,7 @@ public class DebugManuscriptController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        string path = Path.Combine(Application.dataPath, "Data/Manuscript/Json/libraryDebug.json");
+        string path = Path.Combine(Application.dataPath, "Resources/Manuscript/Json/libraryDebug.json");
     	LibraryFactory factory = new LibraryFactory();
     	Library library = factory.FromJSON(path);
 
