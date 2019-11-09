@@ -31,7 +31,7 @@ namespace TankComponents
         private float rampupVelocity = 0f;
 
         //Continous
-        private bool continuousEnabled = false;
+        private bool continuousEnabled;
 
         public void Init()
         {
@@ -56,7 +56,7 @@ namespace TankComponents
 
         }
 
-        private void recoverStamina()
+        private void RecoverStamina()
         {
             if (currentStamina < maxStamina)
             {
@@ -64,7 +64,7 @@ namespace TankComponents
             }
         }
 
-        private void progressCooldown()
+        private void ProgressCooldown()
         {
             if (timeUntilReady > 0)
             {
@@ -81,8 +81,8 @@ namespace TankComponents
                 timeUntilReady = cooldown;
             } else
             {
-                recoverStamina();
-                progressCooldown();
+                RecoverStamina();
+                ProgressCooldown();
             }
         }
 
@@ -103,7 +103,7 @@ namespace TankComponents
 
             } else
             {
-                recoverStamina();
+                RecoverStamina();
             }
         }
 
@@ -127,8 +127,8 @@ namespace TankComponents
 
             if (!continuousEnabled)
             {
-                recoverStamina();
-                progressCooldown();
+                RecoverStamina();
+                ProgressCooldown();
             }
         }
     }

@@ -6,6 +6,7 @@ namespace TankComponents
 {
     public class Armor : MonoBehaviour
     {
+        [SerializeField]
         public float mass;
 
     }

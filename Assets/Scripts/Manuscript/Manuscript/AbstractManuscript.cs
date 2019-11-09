@@ -4,9 +4,13 @@ using UnityEngine;
 
 public abstract class AbstractManuscript : ScriptableObject
 {
-   public string title = "";
-   public string description = "";
-   public string imagePath = "";
-   public string backgroundPath = "";
+    [SerializeField]
+    public string title;
+    [SerializeField]
+    public string description;
+    [SerializeField]
+    public string imagePath;
+    [SerializeField]
+    public string backgroundPath;
 
 }
