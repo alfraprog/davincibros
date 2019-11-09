@@ -9,6 +9,12 @@ namespace TankComponents
         public float driveForce;
         public float brakeForce;
 
+        public void InitFromManuscript(PropulsionManuscript manuscript)
+        {
+            driveForce = manuscript.driveForce;
+            brakeForce = manuscript.brakeForce;
+        }
+
         public void Drive(Rigidbody body, float input)
         {
             float direction = Mathf.Sign(body.velocity.z);

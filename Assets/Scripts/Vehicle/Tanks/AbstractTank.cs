@@ -7,7 +7,8 @@ namespace Tanks
     public class AbstractTank : MonoBehaviour
     {
         public string playerName = "Player";
-        public FightManager fightManager;
+
+        private FightManager fightManager;
 
         void OnCollisionEnter(Collision collision)
         {

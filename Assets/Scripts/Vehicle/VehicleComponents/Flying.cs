@@ -33,14 +33,32 @@ namespace TankComponents
         //Continous
         private bool continuousEnabled;
 
-        public void Init()
+        private bool initialized;
+
+        public void InitFromManuscript(FlyingManuscript manuscript)
         {
+            flyMode = manuscript.flyMode;
+            force = manuscript.force;
+            staminaUsage = manuscript.staminaUsage;
+            staminaRecoveryRate = manuscript.staminaRecoveryRate;
+            maxStamina = manuscript.maxStamina;
+
+            cooldown = manuscript.cooldown;
+            rampUpTime = manuscript.rampUpTime;
+
             currentStamina = maxStamina;
             timeUntilReady = 0;
+            continuousEnabled = false;
+            initialized = true;
         }
 
         public void Fly(Rigidbody body, float input)
         {
+            if (!initialized)
+            {
+                return;
+            }
+
             switch (flyMode)
             {
                 case FlyMode.Impulse:

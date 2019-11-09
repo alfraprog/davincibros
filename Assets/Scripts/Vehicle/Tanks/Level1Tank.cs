@@ -19,6 +19,11 @@ namespace Tanks
 
         private Rigidbody body;
 
+        public ArmorManuscript armorManuscript;
+        public WeaponManuscript[] weaponManuscripts;
+        public PropulsionManuscript propulsionManuscript;
+        public FlyingManuscript flyingManuscript;
+
         // Start is called before the first frame update
         void Start()
         {
@@ -27,22 +32,27 @@ namespace Tanks
 
         void Awake()
         {
-            if (frontWeapon)
+            if (frontWeapon && weaponManuscripts.Length > 0 && weaponManuscripts[0])
             {
-                frontWeapon.Init();
+                frontWeapon.InitFromManuscript(weaponManuscripts[0]);
             }
-            if (rearWeapon)
+            if (rearWeapon && weaponManuscripts.Length > 1 && weaponManuscripts[1])
             {
-                rearWeapon.Init();
+                rearWeapon.InitFromManuscript(weaponManuscripts[1]);
             }
-            if (flying)
+            if (flying && flyingManuscript)
             {
-                flying.Init();
+                flying.InitFromManuscript(flyingManuscript);
+            }
+            if (propulsionManuscript)
+            {
+                propulsion.InitFromManuscript(propulsionManuscript);
             }
             body = GetComponent<Rigidbody>();
             body.mass = mass;
-            if (armor)
+            if (armor && armorManuscript)
             {
+                armor.InitFromManuscript(armorManuscript);
                 body.mass += armor.mass;
             }
 

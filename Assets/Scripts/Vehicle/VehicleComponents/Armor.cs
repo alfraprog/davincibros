@@ -6,9 +6,13 @@ namespace TankComponents
 {
     public class Armor : MonoBehaviour
     {
-        [SerializeField]
         public float mass;
 
+
+        public void InitFromManuscript(ArmorManuscript manuscript)
+        {
+            mass = manuscript.mass;
+        }
     }
 }
 

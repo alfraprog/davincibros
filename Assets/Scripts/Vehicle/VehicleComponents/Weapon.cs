@@ -15,9 +15,7 @@ namespace TankComponents
 
         private float timeUntilReady = 0;
 
-        public void Init()
-        {
-        }
+        private bool initialized;
 
         public void InitFromManuscript(WeaponManuscript manuscript)
         {
@@ -26,10 +24,16 @@ namespace TankComponents
             recoil = manuscript.recoil;
             cooldown = manuscript.cooldown;
             projectileMass = manuscript.projectileMass;
+            initialized = true;
         }
 
         public void Fire(Rigidbody body, bool input)
         {
+            if (!initialized)
+            {
+                return;
+            }
+
             if (input && projectile && timeUntilReady <= 0)
             {
                 GameObject projectileInstance = GameObject.Instantiate(projectile, transform);
