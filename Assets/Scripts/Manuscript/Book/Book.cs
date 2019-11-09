@@ -5,7 +5,7 @@ public class Book
 {
 	private List<AbstractManuscript> manuscrits = new List<AbstractManuscript>();
 
-	public void addManuscript(AbstractManuscript manuscrit)
+	public void AddManuscript(AbstractManuscript manuscrit)
 	{
 		manuscrits.Add(manuscrit);
 	}

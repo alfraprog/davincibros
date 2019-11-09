@@ -3,7 +3,7 @@ using System;
 
 public class BookFactory
 {
-	public Book fromLibrary(Library library)
+	public Book FromLibrary(Library library)
 	{
 		throw new Exception("Not implemented yet");
 	}

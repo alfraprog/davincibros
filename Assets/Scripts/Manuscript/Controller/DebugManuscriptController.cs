@@ -10,7 +10,7 @@ public class DebugManuscriptController : MonoBehaviour
     {
         string path = Path.Combine(Application.dataPath, "Data/Manuscript/Json/libraryDebug.json");
     	LibraryFactory factory = new LibraryFactory();
-    	Library library = factory.fromJSON(path);
+    	Library library = factory.FromJSON(path);
     }
 
     // Update is called once per frame

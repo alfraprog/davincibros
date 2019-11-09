@@ -5,21 +5,21 @@ using System.IO;
 
 public class LibraryFactory
 {
-	public Library fromJSON(string path)
+	public Library FromJSON(string path)
 	{
 		string content = File.ReadAllText(path); 
         LibrarySerializable serializable = JsonUtility.FromJson<LibrarySerializable>(content);
-		return fromSerializable(serializable);
+		return FromSerializable(serializable);
 	}
 
-	public Library fromSerializable(LibrarySerializable librarySerializable)
+	public Library FromSerializable(LibrarySerializable librarySerializable)
 	{
 		ManuscriptFactory factory = new ManuscriptFactory();		
 		Book book = new Book();
 
 		foreach(ManuscriptSerializable manuscriptSerializable in librarySerializable.manuscripts)
 		{
-			book.addManuscript(factory.fromSerializable(manuscriptSerializable));
+			book.AddManuscript(factory.FromSerializable(manuscriptSerializable));
 		}
 
 		return new Library(book); 
