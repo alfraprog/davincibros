@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2451991435252291595}
   m_Layer: 0
   m_Name: Level 1 Tank
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -130,6 +130,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af011bc3f9d11164ca7a35df07fe41ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  projectile: {fileID: 0}
+  muzzleVelocity: {x: 0, y: 0}
+  cooldown: 0
 --- !u!1 &2451991435526994182
 GameObject:
   m_ObjectHideFlags: 0
@@ -217,6 +220,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af011bc3f9d11164ca7a35df07fe41ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  projectile: {fileID: 0}
+  muzzleVelocity: {x: 0, y: 0}
+  cooldown: 0
 --- !u!1 &2451991435698736166
 GameObject:
   m_ObjectHideFlags: 0
@@ -386,8 +392,10 @@ MonoBehaviour:
   flyMode: 0
   force: {x: 100, y: 2000}
   staminaUsage: 20
-  cooldown: 0.5
   staminaRecoveryRate: 5
   maxStamina: 100
   currentStamina: 0
   timeUntilReady: 0
+  cooldown: 0.5
+  rampUpTime: 0
+  rampupParameter: 0

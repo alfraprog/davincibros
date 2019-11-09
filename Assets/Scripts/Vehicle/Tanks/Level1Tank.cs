@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Tanks
 {
-    public class Level1Tank : MonoBehaviour
+    public class Level1Tank : AbstractTank
     {
         public float mass;
 
