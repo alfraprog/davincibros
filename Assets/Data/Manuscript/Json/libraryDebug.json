@@ -1,12 +1,12 @@
 {
 	"manuscripts" : [
-		{ "type" : "Chassis" },
-		{ "type" : "Chassis" },
-		{ "type" : "Flying" },
-		{ "type" : "Flying" },
-		{ "type" : "Propulsion" },
-		{ "type" : "Propulsion" },
-		{ "type" : "Weapon" },
-		{ "type" : "Weapon" }
+		{ "type" : "chassis" },
+		{ "type" : "chassis" },
+		{ "type" : "flying" },
+		{ "type" : "flying" },
+		{ "type" : "propulsion" },
+		{ "type" : "propulsion" },
+		{ "type" : "weapon" },
+		{ "type" : "weapon" }
 	]
 }
