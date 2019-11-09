@@ -389,7 +389,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91661c2a536dd4d88bf654d538f5a873, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manuscript: {fileID: 1199318758335617102, guid: 98c5ce36eb98f4d61805bd3accb3a0b5,
+  manuscriptPicker: {fileID: 8452761052554353915, guid: a44fb3c71cf38ce019ef2cf838125ab8,
     type: 3}
 --- !u!4 &2072211208
 Transform:

@@ -3,10 +3,10 @@ using System.Collections.Generic;
 
 public class Book
 {
-	public List<AbstractManuscript> manuscrits = new List<AbstractManuscript>();
+	public List<AbstractManuscript> manuscripts = new List<AbstractManuscript>();
 
-	public void AddManuscript(AbstractManuscript manuscrit)
+	public void AddManuscript(AbstractManuscript manuscript)
 	{
-		manuscrits.Add(manuscrit);
+		manuscripts.Add(manuscript);
 	}
 }

@@ -9,4 +9,15 @@ public class ManuscriptSerializable
 	public string description;
 	public string image;
 	public string background;
+
+
+    //Weapon
+    public string projectile;
+    public float muzzleVelocityX;
+    public float muzzleVelocityY;
+    public float recoilForce;
+    public float reloadTime;
+    public float projectileMass;
+
+
 }

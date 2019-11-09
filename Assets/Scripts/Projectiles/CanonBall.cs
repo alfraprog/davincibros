@@ -8,7 +8,7 @@ public class CanonBall : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            StartCoroutine(DestroySelf(.2f));
+            StartCoroutine(DestroySelf(.1f));
         } else if (collision.gameObject.CompareTag("Death"))
         {
             Destroy(gameObject);
