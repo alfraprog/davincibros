@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ace2e440414cb9b9ab5f3f5b30b0c4f, type: 3}
   m_Name: Light Canon
   m_EditorClassIdentifier: 
-  title: 
-  description: 
+  title: Light Canon
+  description: Small but shoots fast
   imagePath: 
   backgroundPath: 
   projectile: {fileID: 0}

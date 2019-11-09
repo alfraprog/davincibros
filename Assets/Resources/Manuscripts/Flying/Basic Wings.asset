@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 910d5cde2d3526fceadf4ce44218cf21, type: 3}
   m_Name: Basic Wings
   m_EditorClassIdentifier: 
-  title: 
-  description: 
+  title: Basic Wings
+  description: Small wings
   imagePath: 
   backgroundPath: 
   flyMode: 0
