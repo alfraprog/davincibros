@@ -321,6 +321,11 @@ PrefabInstance:
       propertyPath: inputReader
       value: 
       objectReference: {fileID: 471071785}
+    - target: {fileID: 2451991436136760646, guid: d67a904cb91e305408d055e6b0306b98,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1b0553d1b00554948810e24e30fe5ea3, type: 2}
     - target: {fileID: 2451991435544946435, guid: d67a904cb91e305408d055e6b0306b98,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -738,6 +743,11 @@ PrefabInstance:
       propertyPath: inputReader
       value: 
       objectReference: {fileID: 1235740112}
+    - target: {fileID: 2451991436136760646, guid: d67a904cb91e305408d055e6b0306b98,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 575b5f630e8ee624ba2d8bf4685eb47a, type: 2}
     - target: {fileID: 2451991435544946435, guid: d67a904cb91e305408d055e6b0306b98,
         type: 3}
       propertyPath: m_LocalPosition.z
