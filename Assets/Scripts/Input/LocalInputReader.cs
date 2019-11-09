@@ -7,6 +7,10 @@ namespace PlayerInput
 {
     public class LocalInputReader : InputReader
     {
+        public string horizontal = "Horizontal_P1";
+        public string jump = "Jump_P1";
+        public string fire1 = "Fire1_P1";
+        public string fire2 = "Fire2_P1";
 
         private Inputs lastInput;
 
@@ -25,10 +29,10 @@ namespace PlayerInput
         void Update()
         {
             //Read inputs
-            lastInput.drive = Input.GetAxis("Horizontal");
-            lastInput.fly = Input.GetAxis("Jump");
-            lastInput.fireFront = Input.GetButton("Fire1");
-            lastInput.fireRear = Input.GetButton("Fire2");
+            lastInput.drive = Input.GetAxis(horizontal);
+            lastInput.fly = Input.GetAxis(jump);
+            lastInput.fireFront = Input.GetButton(fire1);
+            lastInput.fireRear = Input.GetButton(fire2);
         }
     }
 }

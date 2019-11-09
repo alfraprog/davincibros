@@ -5,7 +5,7 @@ using UnityEngine;
 public class FollowerCamera : MonoBehaviour
 {
 
-    public Transform target;
+    public List<Transform> targets;
     public Vector3 offset = new Vector3(0, 0, -10);
     public float responsiveness = 0.3f;
 
@@ -14,25 +14,32 @@ public class FollowerCamera : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     private void OnValidate()
     {
-        if (target)
-        {
-            transform.position = target.position + offset;
-        }
+        transform.position = GetAveragePositionOfTargets() + offset;
     }
 
     // Update is called once per frame
     void LateUpdate()
     {
-        if (target)
-        {
-            Vector3 targetPosition = target.position + offset;
-            transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, responsiveness);
+        Vector3 targetPosition = GetAveragePositionOfTargets() + offset;
+        transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, responsiveness);
+    }
 
+    private Vector3 GetAveragePositionOfTargets()
+    {
+        if (targets != null && targets.Count > 0)
+        {
+            Vector3 averagePos = Vector3.zero;
+            foreach (Transform t in targets)
+            {
+                averagePos += t.position;
+            }
+            return averagePos / targets.Count;
         }
+        return Vector3.zero;
     }
 }
