@@ -417,11 +417,6 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1b0553d1b00554948810e24e30fe5ea3, type: 2}
-    - target: {fileID: 2451991435544946435, guid: d67a904cb91e305408d055e6b0306b98,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 1.81
-      objectReference: {fileID: 0}
     - target: {fileID: 2451991435544946434, guid: d67a904cb91e305408d055e6b0306b98,
         type: 3}
       propertyPath: projectile
@@ -442,41 +437,6 @@ PrefabInstance:
         type: 3}
       propertyPath: cooldown
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2451991435443124276, guid: d67a904cb91e305408d055e6b0306b98,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2451991435443124276, guid: d67a904cb91e305408d055e6b0306b98,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2451991435443124276, guid: d67a904cb91e305408d055e6b0306b98,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2451991435443124276, guid: d67a904cb91e305408d055e6b0306b98,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2451991435443124276, guid: d67a904cb91e305408d055e6b0306b98,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2451991435443124276, guid: d67a904cb91e305408d055e6b0306b98,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2451991435443124276, guid: d67a904cb91e305408d055e6b0306b98,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2451991435443124267, guid: d67a904cb91e305408d055e6b0306b98,
         type: 3}
@@ -948,11 +908,6 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 575b5f630e8ee624ba2d8bf4685eb47a, type: 2}
-    - target: {fileID: 2451991435544946435, guid: d67a904cb91e305408d055e6b0306b98,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 1.81
-      objectReference: {fileID: 0}
     - target: {fileID: 2451991435544946434, guid: d67a904cb91e305408d055e6b0306b98,
         type: 3}
       propertyPath: projectile
@@ -973,41 +928,6 @@ PrefabInstance:
         type: 3}
       propertyPath: cooldown
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2451991435443124276, guid: d67a904cb91e305408d055e6b0306b98,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2451991435443124276, guid: d67a904cb91e305408d055e6b0306b98,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2451991435443124276, guid: d67a904cb91e305408d055e6b0306b98,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2451991435443124276, guid: d67a904cb91e305408d055e6b0306b98,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2451991435443124276, guid: d67a904cb91e305408d055e6b0306b98,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2451991435443124276, guid: d67a904cb91e305408d055e6b0306b98,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2451991435443124276, guid: d67a904cb91e305408d055e6b0306b98,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2451991435443124267, guid: d67a904cb91e305408d055e6b0306b98,
         type: 3}
