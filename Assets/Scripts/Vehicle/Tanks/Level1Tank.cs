@@ -15,9 +15,9 @@ namespace Tanks
         public Propulsion propulsion;
         public Flying flying;
 
-        private Rigidbody body;
+        public PlayerInput.InputReader inputReader;
 
-        private Inputs inputs;
+        private Rigidbody body;
 
         // Start is called before the first frame update
         void Start()
@@ -51,16 +51,13 @@ namespace Tanks
         // Update is called once per frame
         void Update()
         {
-            //Read inputs
-            inputs.drive = Input.GetAxis("Horizontal");
-            inputs.fly = Input.GetAxis("Jump");
-            inputs.fireFront = Input.GetButton("Fire1");
-            inputs.fireRear = Input.GetButton("Fire2");
+
         }
 
 
         void FixedUpdate()
         {
+            PlayerInput.Inputs inputs = inputReader.ReadInput();
             if (frontWeapon)
             {
                 frontWeapon.Fire(body, inputs.fireFront);
