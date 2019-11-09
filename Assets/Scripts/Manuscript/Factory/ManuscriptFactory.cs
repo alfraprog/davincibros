@@ -8,7 +8,7 @@ public class ManuscriptFactory
 		throw new Exception("Not implemented yet");
 	}
 
-	public AbstractManuscript fromSerializable(ManuscritSerializable serializable)
+	public AbstractManuscript fromSerializable(ManuscriptSerializable serializable)
 	{
 		throw new Exception("Not implemented yet");
 	}
