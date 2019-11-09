@@ -18,6 +18,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &-7698810107577383856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMOD/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637089412301492708
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-5731040391200437209
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -156,15 +174,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 6520383798772694877}
-  - {fileID: -9154976283295110007}
+  - {fileID: -7698810107577383856}
   EditorEvents:
   - {fileID: 3213664035959448788}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -9154976283295110007}
+  - {fileID: -7698810107577383856}
   StringsBanks:
   - {fileID: 6520383798772694877}
-  stringsBankWriteTime: 637089360497250356
+  stringsBankWriteTime: 637089412301552489
   cacheVersion: 3
 --- !u!114 &3213664035959448788
 MonoBehaviour:
@@ -181,15 +199,32 @@ MonoBehaviour:
   Path: event:/Gamemusic
   guid: 357b84721966f344bacf8de206e48544
   Banks:
-  - {fileID: -9154976283295110007}
+  - {fileID: -7698810107577383856}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -583122045468101654}
+  - {fileID: 5388199016779008894}
   MinDistance: 0
   MaxDistance: 0
   Length: 97920
+--- !u!114 &5388199016779008894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Gamemusic/transition
+  m_EditorClassIdentifier: 
+  Name: transition
+  Min: 0
+  Max: 5
+  Default: 0
+  Exists: 1
 --- !u!114 &6520383798772694877
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -204,7 +239,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/FMOD/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637089360497250356
+  lastModified: 637089412301552489
   LoadResult: 0
   FileSizes:
   - Name: 

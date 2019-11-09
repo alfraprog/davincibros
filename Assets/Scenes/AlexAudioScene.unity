@@ -619,10 +619,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3238ed3f50c9c8c4681eadc2e3277d37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horizontal: Horizontal
-  jump: Jump
-  fire1: Fire1
-  fire2: Fire2
+  horizontal: Horizontal_P1
+  jump: Jump_P1
+  fire1: Fire1_P1
+  fire2: Fire2_P1
 --- !u!4 &1235740115 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2451991435252291592, guid: d67a904cb91e305408d055e6b0306b98,
