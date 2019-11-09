@@ -147,7 +147,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 307652223}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 10, y: 0.794, z: 0}
+  m_LocalPosition: {x: 10, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -216,9 +216,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44c5f29f7a0e67144ad5fd515dbba090, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 1235740115}
   offset: {x: 10, y: 0, z: 0}
-  responsiveness: 0.7
+  responsiveness: 0.3
 --- !u!1 &1070888743
 GameObject:
   m_ObjectHideFlags: 0
@@ -267,6 +267,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3238ed3f50c9c8c4681eadc2e3277d37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &1235740115 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2451991435252291592, guid: d67a904cb91e305408d055e6b0306b98,
+    type: 3}
+  m_PrefabInstance: {fileID: 2451991436202393051}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1549540559
 GameObject:
   m_ObjectHideFlags: 0
@@ -522,5 +528,30 @@ PrefabInstance:
       propertyPath: inputReader
       value: 
       objectReference: {fileID: 1235740112}
+    - target: {fileID: 2451991436436544656, guid: d67a904cb91e305408d055e6b0306b98,
+        type: 3}
+      propertyPath: force.y
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2451991436436544656, guid: d67a904cb91e305408d055e6b0306b98,
+        type: 3}
+      propertyPath: force.x
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 2451991436436544656, guid: d67a904cb91e305408d055e6b0306b98,
+        type: 3}
+      propertyPath: cooldown
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2451991436436544656, guid: d67a904cb91e305408d055e6b0306b98,
+        type: 3}
+      propertyPath: staminaUsage
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2451991436436544656, guid: d67a904cb91e305408d055e6b0306b98,
+        type: 3}
+      propertyPath: flyMode
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d67a904cb91e305408d055e6b0306b98, type: 3}

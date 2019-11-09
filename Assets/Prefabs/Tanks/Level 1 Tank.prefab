@@ -57,6 +57,7 @@ MonoBehaviour:
   rearWeapon: {fileID: 2451991435443124267}
   propulsion: {fileID: 2451991435698736164}
   flying: {fileID: 2451991436436544656}
+  inputReader: {fileID: 0}
 --- !u!65 &2451991435252291594
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -382,4 +383,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86f9331e844dd7541a6e1e9e2a7d37a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: 15000
+  flyMode: 0
+  force: {x: 100, y: 2000}
+  staminaUsage: 20
+  cooldown: 0.5
+  staminaRecoveryRate: 5
+  maxStamina: 100
+  currentStamina: 0
+  timeUntilReady: 0
