@@ -1,4 +1,4 @@
 ﻿
-public class ArmorManuscrit : AbstractManuscrit
+public class ChassisManuscrit : AbstractManuscrit
 {
 }
