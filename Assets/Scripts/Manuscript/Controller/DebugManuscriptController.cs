@@ -16,11 +16,11 @@ public class DebugManuscriptController : MonoBehaviour
         var m = Instantiate(manuscript);
         var o = m.GetComponent<ManuscriptController>();
         o.FillWith(library.book.manuscrits[0]);
-        */
 
         var m = Instantiate(manuscriptPicker);
         var o = m.GetComponent<ManuscriptPickerController>();
         o.PickInBook(library.book, 5);
+        */
 
     }
 
