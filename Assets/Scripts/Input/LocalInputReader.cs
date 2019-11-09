@@ -24,8 +24,12 @@ namespace PlayerInput
         // Update is called once per frame
         void Update()
         {
+            if (Input.GetKeyDown(KeyCode.A)) {
+                Debug.Log("A");
+            }
+
             //Read inputs
-            lastInput.drive = Input.GetAxis("Horizontal");
+            lastInput.drive = Input.GetAxis("Horizontal");            
             lastInput.fly = Input.GetAxis("Jump");
             lastInput.fireFront = Input.GetButton("Fire1");
             lastInput.fireRear = Input.GetButton("Fire2");
