@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4ace2e440414cb9b9ab5f3f5b30b0c4f, type: 3}
-  m_Name: Light Canon
+  m_Name: Heavy Canon
   m_EditorClassIdentifier: 
-  title: Light Canon
-  description: Small but shoots fast
+  title: Heavy Canon
+  description: 
   imagePath: 
   backgroundPath: 
   projectile: {fileID: 772059751735383936, guid: 8c1bcca792c163449a3a761a23d069fd,
     type: 3}
-  muzzleVelocity: {x: 100, y: 0}
-  recoil: 500
-  cooldown: 1
-  impactForce: 2000
+  muzzleVelocity: {x: 50, y: 0}
+  recoil: 2000
+  cooldown: 3
+  impactForce: 8000

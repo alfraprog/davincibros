@@ -8,7 +8,7 @@ namespace Tanks
     {
         public string playerName = "Player";
 
-        private FightManager fightManager;
+        public FightManager fightManager;
 
         void OnCollisionEnter(Collision collision)
         {

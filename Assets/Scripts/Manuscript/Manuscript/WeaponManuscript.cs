@@ -8,6 +8,6 @@ public class WeaponManuscript : AbstractManuscript
     public Vector2 muzzleVelocity;
     public float recoil;
     public float cooldown;
-    public float projectileMass;
+    public float impactForce;
 
 }

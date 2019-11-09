@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class CanonBall : MonoBehaviour
 {
-    private void OnCollisionEnter(Collision collision)
+    public float impactForce = 100f;
+
+    private void OnTriggerEnter(Collider collider)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collider.CompareTag("Player"))
         {
-            StartCoroutine(DestroySelf(.1f));
-        } else if (collision.gameObject.CompareTag("Death"))
+            Vector3 normalizedVelocity = GetComponent<Rigidbody>().velocity.normalized;
+            collider.GetComponent<Rigidbody>().AddForce(normalizedVelocity * impactForce, ForceMode.Impulse);
+            Destroy(gameObject);
+        } else if (collider.CompareTag("Projectile") || collider.CompareTag("Death"))
         {
             Destroy(gameObject);
         }

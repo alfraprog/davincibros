@@ -299,6 +299,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2451991435252291593, guid: d67a904cb91e305408d055e6b0306b98,
         type: 3}
+      propertyPath: weaponManuscripts.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2451991435252291593, guid: d67a904cb91e305408d055e6b0306b98,
+        type: 3}
       propertyPath: inputReader
       value: 
       objectReference: {fileID: 471071785}
@@ -307,6 +312,24 @@ PrefabInstance:
       propertyPath: playerName
       value: Player 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2451991435252291593, guid: d67a904cb91e305408d055e6b0306b98,
+        type: 3}
+      propertyPath: weaponManuscripts.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: b84dbcd35f604e94a82a958be73b247d,
+        type: 2}
+    - target: {fileID: 2451991435252291593, guid: d67a904cb91e305408d055e6b0306b98,
+        type: 3}
+      propertyPath: weaponManuscripts.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: b84cfb924ac1cdd4f9477800be6d6b7f,
+        type: 2}
+    - target: {fileID: 2451991435252291593, guid: d67a904cb91e305408d055e6b0306b98,
+        type: 3}
+      propertyPath: flyingManuscript
+      value: 
+      objectReference: {fileID: 11400000, guid: f0fa207a7251066458ca01cac692a460,
+        type: 2}
     - target: {fileID: 2451991436136760646, guid: d67a904cb91e305408d055e6b0306b98,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -802,6 +825,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2451991435252291593, guid: d67a904cb91e305408d055e6b0306b98,
         type: 3}
+      propertyPath: weaponManuscripts.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2451991435252291593, guid: d67a904cb91e305408d055e6b0306b98,
+        type: 3}
       propertyPath: inputReader
       value: 
       objectReference: {fileID: 1235740112}
@@ -810,6 +838,24 @@ PrefabInstance:
       propertyPath: playerName
       value: ' Player 1'
       objectReference: {fileID: 0}
+    - target: {fileID: 2451991435252291593, guid: d67a904cb91e305408d055e6b0306b98,
+        type: 3}
+      propertyPath: weaponManuscripts.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: b84dbcd35f604e94a82a958be73b247d,
+        type: 2}
+    - target: {fileID: 2451991435252291593, guid: d67a904cb91e305408d055e6b0306b98,
+        type: 3}
+      propertyPath: weaponManuscripts.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: b84cfb924ac1cdd4f9477800be6d6b7f,
+        type: 2}
+    - target: {fileID: 2451991435252291593, guid: d67a904cb91e305408d055e6b0306b98,
+        type: 3}
+      propertyPath: flyingManuscript
+      value: 
+      objectReference: {fileID: 11400000, guid: f0fa207a7251066458ca01cac692a460,
+        type: 2}
     - target: {fileID: 2451991436136760646, guid: d67a904cb91e305408d055e6b0306b98,
         type: 3}
       propertyPath: m_Materials.Array.data[0]

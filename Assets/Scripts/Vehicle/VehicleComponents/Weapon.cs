@@ -11,7 +11,7 @@ namespace TankComponents
         public Vector2 muzzleVelocity;
         public float recoil;
         public float cooldown;
-        public float projectileMass;
+        public float impactForce;
 
         private float timeUntilReady = 0;
 
@@ -23,7 +23,7 @@ namespace TankComponents
             muzzleVelocity = manuscript.muzzleVelocity;
             recoil = manuscript.recoil;
             cooldown = manuscript.cooldown;
-            projectileMass = manuscript.projectileMass;
+            impactForce = manuscript.impactForce;
             initialized = true;
         }
 
@@ -43,8 +43,8 @@ namespace TankComponents
                 //Rotate vector
                 Vector3 velocity = transform.rotation * relativeInitialVelocity;
 
+                projectileInstance.GetComponent<CanonBall>().impactForce = impactForce;
                 projectileInstance.GetComponent<Rigidbody>().velocity = body.velocity + velocity;
-                projectileInstance.GetComponent<Rigidbody>().mass = projectileMass;
                 projectileInstance.transform.position = transform.position;
 
                 body.AddForce(transform.rotation * Vector3.back * recoil, ForceMode.Impulse);
