@@ -35,6 +35,7 @@ public class SpawnPlayers : MonoBehaviour
             //gameManager.callMeOnAllPlayersHaveLevelLoaded();
             startedGame = true;
             
+
             foreach (Player p in PhotonNetwork.PlayerList)
             {
                 Debug.Log("creating player with nick " + p.NickName);
@@ -45,7 +46,8 @@ public class SpawnPlayers : MonoBehaviour
                 }
 
                 if (p.IsLocal) {
-                    PhotonNetwork.Instantiate("Level 1 Tank", Vector3.zero, Quaternion.identity, 0);
+                    GameObject tank = PhotonNetwork.Instantiate("Level 1 Tank", Vector3.zero, Quaternion.identity, 0);
+                    tank.name = p.NickName;
                 }
             }
         }

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Photon.Pun;
+using System.Collections;
 using System.Collections.Generic;
 using TankComponents;
 using UnityEngine;
@@ -19,6 +20,8 @@ namespace Tanks
 
         private Rigidbody body;
 
+        private PhotonView photonView;
+
         // Start is called before the first frame update
         void Start()
         {
@@ -27,6 +30,7 @@ namespace Tanks
 
         void Awake()
         {
+            photonView = GetComponent<PhotonView>();
             if (frontWeapon)
             {
                 frontWeapon.Init();
@@ -56,7 +60,12 @@ namespace Tanks
 
 
         void FixedUpdate()
-        {
+        {   
+            if (!photonView.IsMine) // || !controllable
+            {
+                return;
+            }
+
             PlayerInput.Inputs inputs = inputReader.ReadInput();
             if (frontWeapon)
             {
