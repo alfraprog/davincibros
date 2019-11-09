@@ -1,12 +1,60 @@
 {
 	"manuscripts" : [
-		{ "type" : "chassis" },
-		{ "type" : "chassis" },
-		{ "type" : "flying" },
-		{ "type" : "flying" },
-		{ "type" : "propulsion" },
-		{ "type" : "propulsion" },
-		{ "type" : "weapon" },
-		{ "type" : "weapon" }
+		{ 
+			"type" : "chassis",
+			"title" : "chassis A",
+			"description" : "chassis description",
+			"image" : "default.png",
+			"background" : "default.png"
+		},
+		{ 
+			"type" : "chassis",
+			"title" : "chassis B",
+			"description" : "chassis description",
+			"image" : "default.png",
+			"background" : "default.png"
+		},
+		{ 
+			"type" : "flying",
+			"title" : "flying A",
+			"description" : "flying description",
+			"image" : "default.png",
+			"background" : "default.png"
+		},
+		{ 
+			"type" : "flying",
+			"title" : "flying B",
+			"description" : "flying description",
+			"image" : "default.png",
+			"background" : "default.png"
+		},
+		{ 
+			"type" : "propulsion",
+			"title" : "propulsion A",
+			"description" : "propulsion description",
+			"image" : "default.png",
+			"background" : "default.png"
+		},
+		{ 
+			"type" : "propulsion",
+			"title" : "propulsion B",
+			"description" : "propulsion description",
+			"image" : "default.png",
+			"background" : "default.png"
+		},
+		{ 
+			"type" : "weapon",
+			"title" : "weapon A",
+			"description" : "weapon description",
+			"image" : "default.png",
+			"background" : "default.png"
+		},
+		{ 
+			"type" : "weapon",
+			"title" : "weapon B",
+			"description" : "weapon description",
+			"image" : "default.png",
+			"background" : "default.png"
+		}
 	]
 }
