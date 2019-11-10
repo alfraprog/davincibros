@@ -13,6 +13,14 @@ namespace TankComponents
         public void InitFromManuscript(WeaponManuscript manuscript)
         {
             this.manuscript = manuscript;
+            foreach (Transform child in transform)
+            {
+                GameObject.Destroy(child.gameObject);
+            }
+            if (manuscript.sprite)
+            {
+                GameObject.Instantiate(manuscript.sprite, transform);
+            }
         }
 
         public void Fire(Rigidbody body, bool input)

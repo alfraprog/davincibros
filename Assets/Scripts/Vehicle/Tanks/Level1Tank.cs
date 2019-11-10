@@ -20,6 +20,11 @@ namespace Tanks
 
         }
 
+        private void OnValidate()
+        {
+            Awake();
+        }
+
         void Awake()
         {
 

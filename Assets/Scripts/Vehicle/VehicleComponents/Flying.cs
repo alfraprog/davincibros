@@ -50,6 +50,15 @@ namespace TankComponents
             timeUntilReady = 0;
             continuousEnabled = false;
             initialized = true;
+
+            foreach (Transform child in transform)
+            {
+                GameObject.Destroy(child.gameObject);
+            }
+            if (manuscript.sprite)
+            {
+                GameObject.Instantiate(manuscript.sprite, transform);
+            }
         }
 
         public void Fly(Rigidbody body, float input)

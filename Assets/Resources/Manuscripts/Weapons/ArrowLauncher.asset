@@ -10,21 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4ace2e440414cb9b9ab5f3f5b30b0c4f, type: 3}
-  m_Name: GrenadeLauncher
+  m_Name: ArrowLauncher
   m_EditorClassIdentifier: 
-  title: Grenade Launcher
+  title: Arrow Launcher
   description: 
   imagePath: 
   backgroundPath: 
-  sprite: {fileID: 9038774944981581938, guid: da9527839267d7743af51e5516df88b0, type: 3}
-  type: 1
-  projectile: {fileID: 7243662338941563626, guid: a883874183522a64b84108422d61231d,
+  sprite: {fileID: 1278296752734491539, guid: 384e399376407ff4d860a6c2cc5d43f8, type: 3}
+  type: 0
+  projectile: {fileID: 3760739680567970656, guid: acb90489182b4c0428ed53acab6e4d8e,
     type: 3}
-  muzzleVelocity: {x: 5, y: 1}
-  recoil: 200
-  cooldown: 3
+  muzzleVelocity: {x: 100, y: 0}
+  recoil: 0
+  cooldown: 0
   impactForce: 0
   powerful: 0
-  fuseTime: 2
-  explosionForce: 8000
-  explosionRadius: 5
+  fuseTime: 0
+  explosionForce: 0
+  explosionRadius: 0
