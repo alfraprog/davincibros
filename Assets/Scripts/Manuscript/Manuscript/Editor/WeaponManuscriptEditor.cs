@@ -26,6 +26,7 @@ public class WeaponManuscriptEditor : UnityEditor.Editor
         manuscript.muzzleVelocity = EditorGUILayout.Vector2Field("Muzzle Velocity", manuscript.muzzleVelocity);
         manuscript.recoil = EditorGUILayout.FloatField("Recoil Force", manuscript.recoil);
         manuscript.cooldown = EditorGUILayout.FloatField("Reload Time", manuscript.cooldown);
+        manuscript.launchEffect = (ParticleSystem)EditorGUILayout.ObjectField("LaunchEffect", manuscript.launchEffect,typeof(ParticleSystem),false);
 
 
         EditorGUILayout.Space();

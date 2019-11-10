@@ -9,6 +9,8 @@ public class Grenade : MonoBehaviour
     public float explosionForce;
     public float explosionRadius;
 
+    public ParticleSystem explosionEffect;
+
     private void Start()
     {
         StartCoroutine(LightFuse(fuseTime));
@@ -34,11 +36,16 @@ public class Grenade : MonoBehaviour
 
     private void Explode()
     {
+        GameObject explosion = Instantiate(explosionEffect.gameObject, new Vector3(0, 0, 0), Quaternion.identity);
+        explosion.transform.position = transform.position;
+        explosion.GetComponent<ParticleSystem>().Play();
+
         foreach(GameObject tank in GameObject.FindGameObjectsWithTag("Player"))
         {
             tank.GetComponent<Rigidbody>().AddExplosionForce(explosionForce, transform.position, explosionRadius, .2f, ForceMode.Impulse);
         }
         AudioEngine.PlaySound(Sounds.MassiveExplosion);
+        Destroy(explosion, 2.0f);
         Destroy(gameObject);
     }
 }
