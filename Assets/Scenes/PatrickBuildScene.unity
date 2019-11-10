@@ -546,8 +546,15 @@ MonoBehaviour:
   manuscriptToBuild:
   - {fileID: 11400000, guid: 94e037986d84ef24a98aef13807c7ef1, type: 2}
   - {fileID: 11400000, guid: f0fa207a7251066458ca01cac692a460, type: 2}
+  manuscriptToBuild2:
+  - {fileID: 0}
+  - {fileID: 0}
+  P1Assigned: 0
+  P2Assigned: 0
   axisLayerSelection: Vertical
   axisDirectionSelection: Horizontal
+  p1_assign_button: Manuscript1_P1
+  p2_assign_button: Manuscript1_P2
   dockselector_P1: {fileID: 572125792}
   dockselector_P2: {fileID: 1645957361}
   duration: 15

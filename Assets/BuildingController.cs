@@ -8,10 +8,16 @@ public class BuildingController : MonoBehaviour
 {
     public int buildingPhase = 1;
 
-    public AbstractManuscript[] manuscriptToBuild = new AbstractManuscript[2] {null, null};
+    public AbstractManuscript[] manuscriptToBuild = new AbstractManuscript[2] { null, null };
+    public AbstractManuscript[] manuscriptToBuild2 = new AbstractManuscript[2] { null, null };
+    public int P1Assigned = 0;
+    public int P2Assigned = 0;
 
     public string axisLayerSelection;
     public string axisDirectionSelection;
+    public string p1_assign_button;
+    public string p2_assign_button;
+
 
     public DockSelector dockselector_P1;
     public DockSelector dockselector_P2;
@@ -27,8 +33,12 @@ public class BuildingController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        P1Assigned = 0;
+        P2Assigned = 0;
         manuscriptToBuild[0] = GameManager.Instance.selectedManuscripts[0].manuscripts[0];
         manuscriptToBuild[1] = GameManager.Instance.selectedManuscripts[1].manuscripts[0];
+        manuscriptToBuild2[0] = GameManager.Instance.selectedManuscripts[0].manuscripts[1];
+        manuscriptToBuild2[1] = GameManager.Instance.selectedManuscripts[1].manuscripts[1];
         buildingPhase = GameManager.Instance.fightStage;
 
         startBuildingPhase(buildingPhase, manuscriptToBuild[0], manuscriptToBuild[1]);
@@ -46,6 +56,11 @@ public class BuildingController : MonoBehaviour
         float p2_layer = Input.GetAxis(axisLayerSelection + "_P2");
         float p2_dir = Input.GetAxis(axisDirectionSelection + "_P2");
 
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetButtonDown(p1_assign_button))
+            FinishBuildP1();
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetButtonDown(p2_assign_button))
+            FinishBuildP2();
+        
         if (!selectionMadeP1 &&
             ((Math.Abs(p1_layer) > threshold)
             || (Math.Abs(p1_dir) > threshold))) {
@@ -103,9 +118,6 @@ public class BuildingController : MonoBehaviour
     public void EndPhase() {
         started = -1;
         GameManager.Instance.EndBuildPhase();
-
-        dockselector_P1.placeManuscript(GameManager.Instance.tankConfigP1);
-        dockselector_P2.placeManuscript(GameManager.Instance.tankConfigP2);
     }
 
     public void startBuildingPhase(int phase, AbstractManuscript player1Selection, AbstractManuscript player2Selection) {
@@ -114,5 +126,34 @@ public class BuildingController : MonoBehaviour
         buildingPhase = phase;
         dockselector_P1.startSelection(phase, player1Selection);
         if (dockselector_P2 != null) dockselector_P2.startSelection(phase, player2Selection);
+    }
+
+    public void FinishBuildP1()
+    {
+        if (P1Assigned == 2)
+        {
+            if (P2Assigned == 2)
+                EndPhase();
+            return;
+        }
+            
+        P1Assigned = P1Assigned + 1;
+        dockselector_P1.placeManuscript(GameManager.Instance.tankConfigP1);
+        if (P1Assigned < 2)
+            dockselector_P1.startSelection(buildingPhase, manuscriptToBuild2[0]);
+    }
+
+    public void FinishBuildP2()
+    {
+        if (P2Assigned == 2)
+        {
+            if (P1Assigned == 2)
+                EndPhase();
+            return;
+        }
+        P2Assigned = P2Assigned + 1;
+        dockselector_P2.placeManuscript(GameManager.Instance.tankConfigP2);
+        if (P2Assigned < 2)
+            dockselector_P2.startSelection(buildingPhase, manuscriptToBuild2[1]);
     }
 }

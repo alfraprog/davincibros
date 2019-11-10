@@ -123,7 +123,7 @@ public class DockSelector : MonoBehaviour
             {
                 if (type.Equals("f")) {
                     go = GameObject.Instantiate(dockIndicatorSelectedPrefab);
-                } else if ((selectedLayer == layer) && ((dir < 0) || (selectedSlot == dir)))
+                } else if (((selectedLayer < 0) || (selectedLayer == layer)) && ((dir < 0) || (selectedSlot == dir)))
                     go = GameObject.Instantiate(dockIndicatorSelectedPrefab);
                 else
                     go = GameObject.Instantiate(dockIndicatorSelectablePrefab);
