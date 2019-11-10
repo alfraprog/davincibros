@@ -7,13 +7,12 @@ public class AudioEngine : MonoBehaviour
 {
     static Dictionary<string, FMOD.Studio.EventInstance> events = new Dictionary<string, FMOD.Studio.EventInstance>();
 
+    public bool forceGameMusic = false;
 
     public static void PlaySound(string name)
     {
         //FMODUnity.RuntimeManager.LoadBank("SoundEffects", true);
         
-
-        Debug.Log("This happened?? play sound");
 
         if (!events.ContainsKey(name))
         {
@@ -51,7 +50,14 @@ public class AudioEngine : MonoBehaviour
 
     public void TransitionSong()
     {
+        if (transitionValue > 4)
+        {
+            ResetSong();
+        }
+
         SetParameter("transition", ++transitionValue);
+        Debug.Log("Transitioning song to value " + transitionValue);
+        
     }
 
     void FMODERR(FMOD.RESULT result)
@@ -95,6 +101,30 @@ public class AudioEngine : MonoBehaviour
         musicInstance = FMODUnity.RuntimeManager.CreateInstance(gameSongEventName);
 
         musicInstance.start();
+
+        if (forceGameMusic)
+        {
+            ForceGameSong();
+        }
+
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyUp(KeyCode.P))
+        {
+            TransitionSong();
+        }
+    }
+
+    public void ForceGameSong()
+    {
+        ResetSong();
+
+        transitionValue = 2;
+
+        SetParameter("transition", transitionValue);
+
     }
 
 }
