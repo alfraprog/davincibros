@@ -10,11 +10,9 @@ namespace TankComponents
 
         private float timeUntilReady = 0;
 
-        private EffectCollection effectCollection;
 
         private void Start()
         {
-            effectCollection = GameObject.FindObjectOfType<EffectCollection>();
         }
 
         public void InitFromManuscript(WeaponManuscript manuscript)

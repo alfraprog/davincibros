@@ -28,5 +28,4 @@ MonoBehaviour:
   fuseTime: 2
   explosionForce: 8000
   explosionRadius: 5
-  launchEffect: {fileID: 198917022394846920, guid: e2f6e312efe2ee5469f7d91b8b1ca35d,
-    type: 3}
+  launchEffect: {fileID: 0}
