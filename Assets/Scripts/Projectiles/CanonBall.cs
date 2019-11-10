@@ -26,6 +26,7 @@ public class CanonBall : MonoBehaviour
         {
             Vector3 normalizedVelocity = GetComponent<Rigidbody>().velocity.normalized;
             collider.GetComponent<Rigidbody>().AddForce(normalizedVelocity * impactForce, ForceMode.Impulse);
+            AudioEngine.PlaySound(Sounds.WoodHit);
             Destroy(gameObject);
         } else if (collider.CompareTag("Projectile") || collider.CompareTag("Death"))
         {

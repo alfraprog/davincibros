@@ -9,5 +9,6 @@ public class WeaponManuscript : AbstractManuscript
     public float recoil;
     public float cooldown;
     public float impactForce;
+    public bool powerful;
 
 }

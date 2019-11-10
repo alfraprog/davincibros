@@ -12,6 +12,7 @@ namespace TankComponents
         public float recoil;
         public float cooldown;
         public float impactForce;
+        public bool powerful;
 
         private float timeUntilReady = 0;
 
@@ -24,6 +25,7 @@ namespace TankComponents
             recoil = manuscript.recoil;
             cooldown = manuscript.cooldown;
             impactForce = manuscript.impactForce;
+            powerful = manuscript.powerful;
             initialized = true;
         }
 
@@ -50,7 +52,15 @@ namespace TankComponents
                 body.AddForce(transform.rotation * Vector3.back * recoil, ForceMode.Impulse);
                 timeUntilReady = cooldown;
 
-                AudioEngine.PlaySound(Sounds.CanonShotPowerful);
+                if (powerful)
+                {
+                    AudioEngine.PlaySound(Sounds.CanonShotPowerful);
+                }
+                else
+                {
+                    AudioEngine.PlaySound(Sounds.CanonShot);
+                }
+
             } else if (timeUntilReady > 0)
             {
                 timeUntilReady -= Time.fixedDeltaTime;

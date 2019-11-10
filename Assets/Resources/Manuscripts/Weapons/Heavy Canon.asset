@@ -22,3 +22,4 @@ MonoBehaviour:
   recoil: 3000
   cooldown: 2
   impactForce: 7000
+  powerful: 1

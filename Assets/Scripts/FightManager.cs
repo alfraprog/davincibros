@@ -14,6 +14,7 @@ public class FightManager : MonoBehaviour
         {
             t.SetFightManager(this);
         }
+        AudioEngine.PlaySound(Sounds.StartHorn);
     }
 
     // Update is called once per frame
