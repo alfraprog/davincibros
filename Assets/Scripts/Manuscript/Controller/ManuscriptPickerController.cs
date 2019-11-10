@@ -22,6 +22,8 @@ public class ManuscriptPickerController : MonoBehaviour
     private long started;
     public int manuscriptsPerPlayer = 1;
 
+    public int duration = 10;
+
 
     void Update() {
         if(book == null)
@@ -36,15 +38,28 @@ public class ManuscriptPickerController : MonoBehaviour
 
         if(timerObject != null)
         {
-            long diff = 60-(System.DateTime.Now.Ticks - started) / 10000000;
+            long diff = duration-(System.DateTime.Now.Ticks - started) / 10000000;
             timerObject.GetComponent<UnityEngine.UI.Text>().text = diff.ToString();
+            if(diff < 0)
+            {
+                GameManager.Instance.EndManuscriptSelectPhase();
+            }
         }
     }
 
     public void PickInBook(Book book)
     {
         float x = -360.0f;
+        string[] buttons = {
+            "Buttons/default",
+            "Buttons/default",
+            "Buttons/default",
+            "Buttons/default",
+            "Buttons/default",
+            "Buttons/default"
+        };
 
+        int i=0;
         foreach(AbstractManuscript manuscript in book.manuscripts)
         {
             GameObject gameObject = Instantiate(manuscriptGameObject);
@@ -53,6 +68,7 @@ public class ManuscriptPickerController : MonoBehaviour
             gameObject.transform.position = new Vector3(x,0.0f,700.0f);
             gameObject.transform.localScale = new Vector3(0.5f,0.5f,1.0f);
             controller.FillWith(manuscript);
+            controller.UseButton(buttons[i++]);
             x += 180.0f; 
         }
 

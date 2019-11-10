@@ -28,4 +28,15 @@ public class ManuscriptController : MonoBehaviour
             background.GetComponent<UnityEngine.UI.Image>().sprite  = backgroundImageSprite;
         }
     }
+    public void UseButton(string path)
+    {
+
+		Texture2D imageTexture = Resources.Load<Texture2D>(path);
+        if(imageTexture)
+        {
+            GameObject button = transform.Find ("Button").gameObject;
+            Sprite imageSprite = Sprite.Create(imageTexture, new Rect(0.0f, 0.0f, imageTexture.width, imageTexture.height), new Vector2(0.5f, 0.5f), 100.0f);
+            button.GetComponent<UnityEngine.UI.Image>().sprite  = imageSprite;
+        }
+    }
 }
