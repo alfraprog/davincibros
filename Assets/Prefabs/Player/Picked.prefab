@@ -89,6 +89,7 @@ GameObject:
   - component: {fileID: 7008529142738158413}
   - component: {fileID: 7008529142738158412}
   - component: {fileID: 7008529142738158403}
+  - component: {fileID: 3782749173430032861}
   m_Layer: 5
   m_Name: Picked
   m_TagString: Untagged
@@ -176,3 +177,19 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &3782749173430032861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7008529142738158402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 034f4213e7aa56f5b97789280817455a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  alignRight: 0
+  manuscriptsPerPlayer: 1
+  checkboxGameObject: {fileID: 2863958682791777731, guid: 8efdbc50497c848cb96710b52a0a7523,
+    type: 3}

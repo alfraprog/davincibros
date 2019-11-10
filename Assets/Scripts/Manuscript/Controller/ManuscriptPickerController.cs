@@ -13,25 +13,31 @@ public class ManuscriptPickerController : MonoBehaviour
     public LocalInputReader player1Inputs;
     public LocalInputReader player2Inputs;
 
+    public PlayerPickedController player1Picked;
+    public PlayerPickedController player2Picked;
+
     public GameObject timerObject;
 
     public Book book;
     private List<int> p1;
     private List<int> p2;
-    
+
     private long started;
     public int manuscriptsPerPlayer = 1;
 
     public int duration = 10;
 
-
+    private void Start() {
+        player1Picked.Checkable(manuscriptsPerPlayer);
+        player2Picked.Checkable(manuscriptsPerPlayer);
+    }
     void Update() {
         if(book == null)
         {
             Library library = libraryGameObject.GetComponent<Library>();
             if(library.loaded)
             {
-                book = library.RandomBook(2);
+                book = library.RandomBook(5);
                 PickInBook(book);
             }
         }
@@ -42,7 +48,7 @@ public class ManuscriptPickerController : MonoBehaviour
             timerObject.GetComponent<UnityEngine.UI.Text>().text = diff.ToString();
             if(diff < 0)
             {
-                GameManager.Instance.EndManuscriptSelectPhase();
+                End();
             }
         }
     }
@@ -80,17 +86,23 @@ public class ManuscriptPickerController : MonoBehaviour
 
     void FixedUpdate()
     {
+        int done = 0;
         if(p1 != null && SelectFor( player1Inputs.ReadInput(), p1))
         {
-            Debug.Log("P1 DONE");
-            Debug.Log(p1);
+            done++;
         }
-        /*
-        if(SelectFor( SelectFor( player2Inputs.ReadInput(), p2)))
+        if(p2 != null && SelectFor( player2Inputs.ReadInput(), p2))
         {
-            Debug.Log("P2 DONE");
-            Debug.Log(p2);
-        }*/
+            done++;
+        }
+
+        player1Picked.CheckedUntil(p1.Count);
+        player2Picked.CheckedUntil(p2.Count);
+
+        if(done > 1)
+        {
+            End();
+        }
     }
 
     bool SelectFor(Inputs inputs, List<int> selected)
@@ -112,5 +124,50 @@ public class ManuscriptPickerController : MonoBehaviour
         }
 
         return selected.Count == manuscriptsPerPlayer;
+    }
+
+    private void End()
+    {
+        if(p1.Count < manuscriptsPerPlayer)
+        {
+            SelectRandom(p1);
+        }
+        if(p2.Count < manuscriptsPerPlayer)
+        {
+            SelectRandom(p2);
+        }
+
+        Book p1Book = GameManager.Instance.selectedManuscripts.Count > 1
+            ?  GameManager.Instance.selectedManuscripts[0]
+            : new Book();
+
+        Book p2Book = GameManager.Instance.selectedManuscripts.Count > 1
+            ?  GameManager.Instance.selectedManuscripts[1]
+            : new Book();
+
+        AppendToBook(p1Book, p1);
+        AppendToBook(p2Book, p2);
+        GameManager.Instance.EndManuscriptSelectPhase(p1Book, p2Book);
+    }
+
+    private void SelectRandom(List<int> selected)
+    {
+        System.Random random = new System.Random();
+        while(selected.Count < manuscriptsPerPlayer)
+        {
+            int selection = random.Next(0, book.manuscripts.Count);
+            if(!selected.Contains(selection))
+            {
+                selected.Add(selection);
+            }
+        }
+    }
+
+    private void AppendToBook(Book book, List<int> selected)
+    {
+        foreach(int i in selected)
+        {
+            book.AddManuscript(this.book.manuscripts[i]);
+        }
     }
 }

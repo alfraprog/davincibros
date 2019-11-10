@@ -10,6 +10,13 @@ namespace TankComponents
 
         private float timeUntilReady = 0;
 
+        private EffectCollection effectCollection;
+
+        private void Start()
+        {
+            effectCollection = GameObject.FindObjectOfType<EffectCollection>();
+        }
+
         public void InitFromManuscript(WeaponManuscript manuscript)
         {
             this.manuscript = manuscript;
@@ -42,6 +49,7 @@ namespace TankComponents
                         break;
                 }
 
+                TriggerLaunchEffect();
                 ApplyRecoil(body);
                 ResetCooldown();
 
@@ -50,6 +58,15 @@ namespace TankComponents
                 timeUntilReady -= Time.fixedDeltaTime;
             }
 
+        }
+
+        private void TriggerLaunchEffect() {
+            if (manuscript.launchEffect != null) {
+                GameObject effect = Instantiate(manuscript.launchEffect.gameObject, new Vector3(0, 0, 0), transform.rotation);
+                effect.transform.position = transform.position;
+                effect.GetComponent<ParticleSystem>().Play();
+                Destroy(effect, 5);
+            }
         }
 
         private void FireKinetic(Rigidbody body)

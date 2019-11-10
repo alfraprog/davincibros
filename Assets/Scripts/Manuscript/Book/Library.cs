@@ -40,13 +40,13 @@ public class Library : MonoBehaviour
         int i=0;
         System.Random random = new System.Random();
 
-        while(i<0)
+        while(i<size)
         {
             indexes[i] = random.Next(0, manuscripts.Count);
             bool picked = false;
-            for(int j=0; j<0; j++)
+            for(int j=0; j<i; j++)
             {
-                picked = picked || j==i;
+                picked = picked || indexes[j]==indexes[i];
             }
             if(!picked)
             {

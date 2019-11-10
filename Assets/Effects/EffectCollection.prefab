@@ -45,3 +45,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cannonLaunchEffectPrefab: {fileID: 8522857845065782613, guid: dcc87a2df1349d44ab641b6a5dc9e906,
     type: 3}
+  explosionPrefab: {fileID: 1121192042590650, guid: e2f6e312efe2ee5469f7d91b8b1ca35d,
+    type: 3}

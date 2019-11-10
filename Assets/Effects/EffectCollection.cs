@@ -15,7 +15,7 @@ public class EffectCollection : MonoBehaviour
 
     public GameObject GetExplosionEffect()
     {
-        return Instantiate(cannonLaunchEffectPrefab, new Vector3(0, 0, 0), Quaternion.identity);
+        return Instantiate(explosionPrefab, new Vector3(0, 0, 0), Quaternion.identity);
     }
 
 }

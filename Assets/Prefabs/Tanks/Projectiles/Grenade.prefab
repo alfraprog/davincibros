@@ -206,3 +206,5 @@ MonoBehaviour:
   fuseTime: 0
   explosionForce: 0
   explosionRadius: 0
+  explosionEffect: {fileID: 198917022394846920, guid: e2f6e312efe2ee5469f7d91b8b1ca35d,
+    type: 3}
