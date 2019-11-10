@@ -18,6 +18,10 @@ public class FlyingEditor : UnityEditor.Editor
 
         EditorGUILayout.Space();
 
+        manuscript.sprite = (GameObject)EditorGUILayout.ObjectField("Sprite", manuscript.sprite, typeof(GameObject), false);
+
+        EditorGUILayout.Space();
+
         manuscript.flyMode = (Flying.FlyMode)EditorGUILayout.EnumPopup("Type", manuscript.flyMode);
         manuscript.force = EditorGUILayout.Vector2Field("Force Vector", manuscript.force);
 

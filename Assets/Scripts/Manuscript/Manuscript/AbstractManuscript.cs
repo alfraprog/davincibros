@@ -12,5 +12,6 @@ public abstract class AbstractManuscript : ScriptableObject
     public string imagePath;
     [SerializeField]
     public string backgroundPath;
+    public GameObject sprite;
 
 }

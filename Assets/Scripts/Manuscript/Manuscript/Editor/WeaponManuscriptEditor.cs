@@ -20,6 +20,7 @@ public class WeaponManuscriptEditor : UnityEditor.Editor
 
         manuscript.type = (WeaponManuscript.Type)EditorGUILayout.EnumPopup("Type", manuscript.type);
         manuscript.projectile = (GameObject)EditorGUILayout.ObjectField("Projectile", manuscript.projectile, typeof(GameObject), false);
+        manuscript.sprite = (GameObject)EditorGUILayout.ObjectField("Sprite", manuscript.sprite, typeof(GameObject), false);
 
         EditorGUILayout.Space();
 

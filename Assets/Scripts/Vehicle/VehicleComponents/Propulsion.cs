@@ -13,6 +13,15 @@ namespace TankComponents
         {
             driveForce = manuscript.driveForce;
             brakeForce = manuscript.brakeForce;
+
+            foreach (Transform child in transform)
+            {
+                GameObject.Destroy(child.gameObject);
+            }
+            if (manuscript.sprite)
+            {
+                GameObject.Instantiate(manuscript.sprite, transform);
+            }
         }
 
         public void Drive(Rigidbody body, float input)
