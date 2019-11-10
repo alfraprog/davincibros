@@ -1078,6 +1078,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26a1f47c4d5c0fc84be4b5745616471e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  loaded: 0
+  manuscripts: []
   weaponManuscripts: []
   flyingManuscripts: []
   propulsionManuscripts: []
