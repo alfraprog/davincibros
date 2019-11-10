@@ -19,6 +19,8 @@ public class GameManager : Singleton<GameManager>
         GameOver
     }
 
+    public List<Book> selectedManuscripts = new List<Book>();
+
     public string manuscriptSelectionScene;
     public string buildingScene;
     public string[] fightScenes;
@@ -78,8 +80,12 @@ public class GameManager : Singleton<GameManager>
         }
     }
 
-    public void EndManuscriptSelectPhase()
+    public void EndManuscriptSelectPhase(Book p1Book, Book p2Book)
     {
+        selectedManuscripts = new List<Book>();
+        selectedManuscripts.Add(p1Book);
+        selectedManuscripts.Add(p2Book);
+        
         //Todo persist any data in the GameManager
         gamePhase = GamePhase.Build;
         TransitionSong();

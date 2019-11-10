@@ -37,7 +37,7 @@ public class ManuscriptPickerController : MonoBehaviour
             Library library = libraryGameObject.GetComponent<Library>();
             if(library.loaded)
             {
-                book = library.RandomBook(2);
+                book = library.RandomBook(5);
                 PickInBook(book);
             }
         }
@@ -136,7 +136,18 @@ public class ManuscriptPickerController : MonoBehaviour
         {
             SelectRandom(p2);
         }
-        //GameManager.Instance.EndManuscriptSelectPhase();
+
+        Book p1Book = GameManager.Instance.selectedManuscripts.Count > 1
+            ?  GameManager.Instance.selectedManuscripts[0]
+            : new Book();
+
+        Book p2Book = GameManager.Instance.selectedManuscripts.Count > 1
+            ?  GameManager.Instance.selectedManuscripts[1]
+            : new Book();
+
+        AppendToBook(p1Book, p1);
+        AppendToBook(p2Book, p2);
+        GameManager.Instance.EndManuscriptSelectPhase(p1Book, p2Book);
     }
 
     private void SelectRandom(List<int> selected)
@@ -149,6 +160,14 @@ public class ManuscriptPickerController : MonoBehaviour
             {
                 selected.Add(selection);
             }
+        }
+    }
+
+    private void AppendToBook(Book book, List<int> selected)
+    {
+        foreach(int i in selected)
+        {
+            book.AddManuscript(this.book.manuscripts[i]);
         }
     }
 }
