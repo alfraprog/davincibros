@@ -98,8 +98,8 @@ public class ManuscriptPickerController : MonoBehaviour
             done++;
         }
 
-        player1Picked.CheckedUntil(p1.Count);
-        player2Picked.CheckedUntil(p2.Count);
+        if(p1!=null && player1Picked!=null)player1Picked.CheckedUntil(p1.Count);
+        if(p2!=null && player2Picked!=null)player2Picked.CheckedUntil(p2.Count);
 
         if(done > 1)
         {
