@@ -28,3 +28,5 @@ MonoBehaviour:
   fuseTime: 0
   explosionForce: 0
   explosionRadius: 0
+  launchEffect: {fileID: 7087636714957316009, guid: 5d5c10d78a077f74486d390b7def99bb,
+    type: 3}
