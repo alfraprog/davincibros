@@ -10,11 +10,9 @@ namespace TankComponents
 
         private float timeUntilReady = 0;
 
-        private EffectCollection effectCollection;
 
         private void Start()
         {
-            effectCollection = GameObject.FindObjectOfType<EffectCollection>();
         }
 
         public void InitFromManuscript(WeaponManuscript manuscript)
@@ -76,14 +74,18 @@ namespace TankComponents
 
             projectileInstance.GetComponent<CanonBall>().impactForce = manuscript.impactForce;
 
-            if (manuscript.powerful)
+            if(manuscript.playSound)
             {
-                AudioEngine.PlaySound(Sounds.CanonShotPowerful);
+                if (manuscript.powerful)
+                {
+                    AudioEngine.PlaySound(Sounds.CanonShotPowerful);
+                }
+                else
+                {
+                    AudioEngine.PlaySound(Sounds.CanonShot);
+                }
             }
-            else
-            {
-                AudioEngine.PlaySound(Sounds.CanonShot);
-            }
+
 
         }
 

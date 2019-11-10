@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Basic Wings
   description: Small wings
-  imagePath: Manuscripts/Images/default
-  backgroundPath: Manuscripts/Backgrounds/default
+  imagePath: Graphics/Craft_elements/graphicComponents_fly_1_wing
+  backgroundPath: Manuscripts/Backgrounds/Template_card_fly
   sprite: {fileID: 6109993770149628137, guid: 720ae66ee45fcee468b3dd4cc777780b, type: 3}
   flyMode: 0
   force: {x: 0, y: 4000}
@@ -24,3 +24,4 @@ MonoBehaviour:
   maxStamina: 100
   cooldown: 0.5
   rampUpTime: 0
+  sound: 2

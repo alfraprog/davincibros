@@ -5,6 +5,14 @@ using static TankComponents.Flying;
 [CreateAssetMenu(fileName = "Flying Invention", menuName = "Manuscripts/FlyingManuscript", order = 2)]
 public class FlyingManuscript : AbstractManuscript
 {
+    public enum Sound
+    {
+        Rocket,
+        Spring,
+        Wings,
+        Screw
+    }
+
     [SerializeField]
     public FlyMode flyMode;
     [SerializeField]
@@ -23,5 +31,7 @@ public class FlyingManuscript : AbstractManuscript
     //Ramp up
     [SerializeField]
     public float rampUpTime;
+
+    public Sound sound;
 }
 

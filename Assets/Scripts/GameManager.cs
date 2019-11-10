@@ -5,6 +5,25 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : Singleton<GameManager>
 {
+    public class TankConfig
+    {
+        public AbstractManuscript wheel_left;
+        public AbstractManuscript wheel_right;
+
+        public AbstractManuscript weapon_L0_left;
+        public AbstractManuscript weapon_L0_right;
+        public AbstractManuscript weapon_L1_left;
+        public AbstractManuscript weapon_L1_right;
+        public AbstractManuscript weapon_L2_left;
+        public AbstractManuscript weapon_L2_right;
+
+        public AbstractManuscript armor_L0;
+        public AbstractManuscript armor_L1;
+        public AbstractManuscript armor_L2;
+
+        public AbstractManuscript flight;
+    }
+
     public enum Player
     {
         Player1,
@@ -30,6 +49,9 @@ public class GameManager : Singleton<GameManager>
     public int fightStage = 0;
 
     public List<Player> fightWinners = new List<Player>();
+
+    public TankConfig tankConfigP1 = new TankConfig();
+    public TankConfig tankConfigP2 = new TankConfig();
 
     // Start is called before the first frame update
     void Start()

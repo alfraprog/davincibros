@@ -348,20 +348,18 @@ PrefabInstance:
     - target: {fileID: 2451991435252291593, guid: d67a904cb91e305408d055e6b0306b98,
         type: 3}
       propertyPath: weaponManuscripts.Array.size
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2451991435252291593, guid: d67a904cb91e305408d055e6b0306b98,
         type: 3}
       propertyPath: propulsionManuscript
       value: 
-      objectReference: {fileID: 11400000, guid: 37e4392473db0354e8eaab068303bc99,
-        type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 2451991435252291593, guid: d67a904cb91e305408d055e6b0306b98,
         type: 3}
       propertyPath: flyingManuscript
       value: 
-      objectReference: {fileID: 11400000, guid: f0fa207a7251066458ca01cac692a460,
-        type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 2451991435252291593, guid: d67a904cb91e305408d055e6b0306b98,
         type: 3}
       propertyPath: weaponManuscripts.Array.data[0]
@@ -979,7 +977,7 @@ PrefabInstance:
     - target: {fileID: 2451991435252291593, guid: d67a904cb91e305408d055e6b0306b98,
         type: 3}
       propertyPath: weaponManuscripts.Array.size
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2451991435252291593, guid: d67a904cb91e305408d055e6b0306b98,
         type: 3}
@@ -990,14 +988,12 @@ PrefabInstance:
         type: 3}
       propertyPath: flyingManuscript
       value: 
-      objectReference: {fileID: 11400000, guid: f0fa207a7251066458ca01cac692a460,
-        type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 2451991435252291593, guid: d67a904cb91e305408d055e6b0306b98,
         type: 3}
       propertyPath: propulsionManuscript
       value: 
-      objectReference: {fileID: 11400000, guid: 37e4392473db0354e8eaab068303bc99,
-        type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 2451991435252291593, guid: d67a904cb91e305408d055e6b0306b98,
         type: 3}
       propertyPath: weaponManuscripts.Array.data[0]

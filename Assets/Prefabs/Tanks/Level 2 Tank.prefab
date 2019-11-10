@@ -53,6 +53,7 @@ MonoBehaviour:
   cooldown: 0.5
   rampUpTime: 0
   rampupParameter: 0
+  manuscript: {fileID: 0}
 --- !u!1 &2330893310067037622
 GameObject:
   m_ObjectHideFlags: 0
@@ -308,8 +309,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 717835ce5d2938343a0078a94a686aea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  driveForce: 10000
-  brakeForce: 20000
+  driveForce: 0
+  brakeForce: 0
 --- !u!1 &2330893311450630370
 GameObject:
   m_ObjectHideFlags: 0

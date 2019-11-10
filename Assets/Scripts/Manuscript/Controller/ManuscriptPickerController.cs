@@ -38,7 +38,7 @@ public class ManuscriptPickerController : MonoBehaviour
             Library library = libraryGameObject.GetComponent<Library>();
             if(library.loaded)
             {
-                book = library.RandomBook(5);
+                book = library.RandomBook(6);
                 PickInBook(book);
             }
         }
@@ -58,14 +58,14 @@ public class ManuscriptPickerController : MonoBehaviour
     {
         float x = -360.0f;
         string[] buttons = {
-            "Buttons/default",
-            "Buttons/default",
-            "Buttons/default",
-            "Buttons/default",
-            "Buttons/default",
-            "Buttons/default"
+            "Manuscripts/Backgrounds/button_a",
+            "Manuscripts/Backgrounds/button_b",
+            "Manuscripts/Backgrounds/button_y",
+            "Manuscripts/Backgrounds/button_x",
+            "Manuscripts/Backgrounds/button_lb",
+            "Manuscripts/Backgrounds/button_rb"
         };
-
+        
         int i=0;
         foreach(AbstractManuscript manuscript in book.manuscripts)
         {
@@ -98,8 +98,8 @@ public class ManuscriptPickerController : MonoBehaviour
             done++;
         }
 
-        player1Picked.CheckedUntil(p1.Count);
-        player2Picked.CheckedUntil(p2.Count);
+        if(p1!=null && player1Picked!=null)player1Picked.CheckedUntil(p1.Count);
+        if(p2!=null && player2Picked!=null)player2Picked.CheckedUntil(p2.Count);
 
         if(done > 1)
         {

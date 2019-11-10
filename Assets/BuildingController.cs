@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BuildingController : MonoBehaviour
 {
@@ -18,14 +19,21 @@ public class BuildingController : MonoBehaviour
     private bool selectionMadeP1 = false;
     private bool selectionMadeP2 = false;
 
+    public int duration;
+    private long started;
+    public Text timerText;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        //TODO only for debugging! remove later and do via GameManager
-        startBuildingPhase(2, manuscriptToBuild[0], manuscriptToBuild[1]);
+        manuscriptToBuild[0] = GameManager.Instance.selectedManuscripts[0].manuscripts[0];
+        manuscriptToBuild[1] = GameManager.Instance.selectedManuscripts[1].manuscripts[0];
+        buildingPhase = GameManager.Instance.fightStage;
 
-        
+        startBuildingPhase(buildingPhase, manuscriptToBuild[0], manuscriptToBuild[1]);
+
+        StartTimer();
     }
 
     // Update is called once per frame
@@ -75,6 +83,29 @@ public class BuildingController : MonoBehaviour
         {
             selectionMadeP2 = false;
         }
+
+
+        if ((started > -1) &&  (timerText != null))
+        {
+            long diff = duration - (System.DateTime.Now.Ticks - started) / 10000000;
+            timerText.text = diff.ToString();
+            if (diff < 0)
+            {
+                EndPhase();
+            }
+        }
+    }
+
+    public void StartTimer() {
+        started = System.DateTime.Now.Ticks;
+    }
+
+    public void EndPhase() {
+        started = -1;
+        GameManager.Instance.EndBuildPhase();
+
+        dockselector_P1.placeManuscript(GameManager.Instance.tankConfigP1);
+        dockselector_P2.placeManuscript(GameManager.Instance.tankConfigP2);
     }
 
     public void startBuildingPhase(int phase, AbstractManuscript player1Selection, AbstractManuscript player2Selection) {
