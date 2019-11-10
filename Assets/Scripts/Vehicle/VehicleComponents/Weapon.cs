@@ -49,6 +49,8 @@ namespace TankComponents
 
                 body.AddForce(transform.rotation * Vector3.back * recoil, ForceMode.Impulse);
                 timeUntilReady = cooldown;
+
+                AudioEngine.PlaySound(Sounds.CanonShotPowerful);
             } else if (timeUntilReady > 0)
             {
                 timeUntilReady -= Time.fixedDeltaTime;
