@@ -27,6 +27,7 @@ public class ManuscriptPickerController : MonoBehaviour
 
     public int duration = 10;
 
+
     private void Start() {
         player1Picked.Checkable(manuscriptsPerPlayer);
         player2Picked.Checkable(manuscriptsPerPlayer);
@@ -71,10 +72,11 @@ public class ManuscriptPickerController : MonoBehaviour
             GameObject gameObject = Instantiate(manuscriptGameObject);
             ManuscriptController controller = gameObject.GetComponent<ManuscriptController>();
 
-            gameObject.transform.position = new Vector3(x,0.0f,700.0f);
-            gameObject.transform.localScale = new Vector3(0.5f,0.5f,1.0f);
+            gameObject.transform.position = new Vector3(0.0f,0.0f,700.0f);
+            gameObject.transform.localScale = new Vector3(0.0f,0.0f,1.0f);
             controller.FillWith(manuscript);
             controller.UseButton(buttons[i++]);
+            controller.AnimateTo(x, 0.5f, 400);
             x += 180.0f; 
         }
 
