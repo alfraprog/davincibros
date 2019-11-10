@@ -28,3 +28,4 @@ MonoBehaviour:
   fuseTime: 0
   explosionForce: 0
   explosionRadius: 0
+  launchEffect: {fileID: 0}
