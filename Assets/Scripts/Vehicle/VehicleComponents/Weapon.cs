@@ -6,66 +6,95 @@ namespace TankComponents
 {
     public class Weapon : MonoBehaviour
     {
-
-        public GameObject projectile;
-        public Vector2 muzzleVelocity;
-        public float recoil;
-        public float cooldown;
-        public float impactForce;
-        public bool powerful;
+        public WeaponManuscript manuscript;
 
         private float timeUntilReady = 0;
 
-        private bool initialized;
-
         public void InitFromManuscript(WeaponManuscript manuscript)
         {
-            projectile = manuscript.projectile;
-            muzzleVelocity = manuscript.muzzleVelocity;
-            recoil = manuscript.recoil;
-            cooldown = manuscript.cooldown;
-            impactForce = manuscript.impactForce;
-            powerful = manuscript.powerful;
-            initialized = true;
+            this.manuscript = manuscript;
         }
 
         public void Fire(Rigidbody body, bool input)
         {
-            if (!initialized)
+            if (manuscript == null)
             {
                 return;
             }
 
-            if (input && projectile && timeUntilReady <= 0)
+            if (input && manuscript.projectile && timeUntilReady <= 0)
             {
-                GameObject projectileInstance = GameObject.Instantiate(projectile, transform);
-
-                Vector3 relativeInitialVelocity = new Vector3(0, muzzleVelocity.y, muzzleVelocity.x);
-
-                //Rotate vector
-                Vector3 velocity = transform.rotation * relativeInitialVelocity;
-
-                projectileInstance.GetComponent<CanonBall>().impactForce = impactForce;
-                projectileInstance.GetComponent<Rigidbody>().velocity = body.velocity + velocity;
-                projectileInstance.transform.position = transform.position;
-
-                body.AddForce(transform.rotation * Vector3.back * recoil, ForceMode.Impulse);
-                timeUntilReady = cooldown;
-
-                if (powerful)
+                switch (manuscript.type)
                 {
-                    AudioEngine.PlaySound(Sounds.CanonShotPowerful);
+                    case WeaponManuscript.Type.Kinetic:
+                        FireKinetic(body);
+                        break;
+                    case WeaponManuscript.Type.Explosive:
+                        FireExplosive(body);
+                        break;
                 }
-                else
-                {
-                    AudioEngine.PlaySound(Sounds.CanonShot);
-                }
+
+                ApplyRecoil(body);
+                ResetCooldown();
 
             } else if (timeUntilReady > 0)
             {
                 timeUntilReady -= Time.fixedDeltaTime;
             }
 
+        }
+
+        private void FireKinetic(Rigidbody body)
+        {
+
+            GameObject projectileInstance = InstantiateProjectile(body);
+
+            projectileInstance.GetComponent<CanonBall>().impactForce = manuscript.impactForce;
+
+            if (manuscript.powerful)
+            {
+                AudioEngine.PlaySound(Sounds.CanonShotPowerful);
+            }
+            else
+            {
+                AudioEngine.PlaySound(Sounds.CanonShot);
+            }
+
+        }
+
+        private void FireExplosive(Rigidbody body)
+        {
+            GameObject projectileInstance = InstantiateProjectile(body);
+
+            Grenade g = projectileInstance.GetComponent<Grenade>();
+
+            g.fuseTime = manuscript.fuseTime;
+            g.explosionForce = manuscript.explosionForce;
+            g.explosionRadius = manuscript.explosionRadius;
+        }
+
+        private GameObject InstantiateProjectile(Rigidbody body)
+        {
+            GameObject projectileInstance = GameObject.Instantiate(manuscript.projectile, transform);
+
+            Vector3 relativeInitialVelocity = new Vector3(0, manuscript.muzzleVelocity.y, manuscript.muzzleVelocity.x);
+
+            //Rotate vector
+            Vector3 velocity = transform.rotation * relativeInitialVelocity;
+            projectileInstance.GetComponent<Rigidbody>().velocity = body.velocity + velocity;
+            projectileInstance.transform.position = transform.position;
+
+            return projectileInstance;
+        }
+
+        private void ResetCooldown()
+        {
+            timeUntilReady = manuscript.cooldown;
+        }
+
+        private void ApplyRecoil(Rigidbody body)
+        {
+            body.AddForce(transform.rotation * Vector3.back * manuscript.recoil, ForceMode.Impulse);
         }
     }
 }

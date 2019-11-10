@@ -1,6 +1,6 @@
 ### fmod ###
 
-fmod_editor.log
+*.log
 fmod.log
 FMODStudioCache.asset
 Assets/FMODStudioCache.asset

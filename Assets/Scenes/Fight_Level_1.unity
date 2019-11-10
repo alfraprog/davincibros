@@ -366,7 +366,7 @@ PrefabInstance:
         type: 3}
       propertyPath: weaponManuscripts.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: b84dbcd35f604e94a82a958be73b247d,
+      objectReference: {fileID: 11400000, guid: 6b1383e13abf58e4eb168ae5e01c0788,
         type: 2}
     - target: {fileID: 2451991435252291593, guid: d67a904cb91e305408d055e6b0306b98,
         type: 3}
