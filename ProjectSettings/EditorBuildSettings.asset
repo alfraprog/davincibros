@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Fight_Level_1.unity
     guid: 652b812d591ab3b40ace03477c3da87d
+  - enabled: 1
+    path: Assets/Scenes/Fight_Level_2.unity
+    guid: e27b8dc55cc942e46934492789b5da2a
   - enabled: 0
     path: Assets/Scenes/AlexCardSelection.unity
     guid: fb9dec087012d3348b90b257f3a00a15

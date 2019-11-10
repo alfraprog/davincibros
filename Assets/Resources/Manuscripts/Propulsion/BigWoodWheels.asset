@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6841b016ed9418822854dc7817ecc96d, type: 3}
+  m_Name: BigWoodWheels
+  m_EditorClassIdentifier: 
+  title: 
+  description: 
+  imagePath: 
+  backgroundPath: 
+  sprite: {fileID: 4908221257748406582, guid: ac0134fd748aa6942a3c10d6c14a0dcd, type: 3}
+  driveForce: 0
+  brakeForce: 0

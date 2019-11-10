@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ace2e440414cb9b9ab5f3f5b30b0c4f, type: 3}
+  m_Name: Pistol
+  m_EditorClassIdentifier: 
+  title: Pistol
+  description: 
+  imagePath: 
+  backgroundPath: 
+  sprite: {fileID: 393054262487454080, guid: 776d83b75cfaf774d8be07d3a9c9e8c6, type: 3}
+  type: 0
+  projectile: {fileID: 4051378570779469345, guid: 88216927cf5fa8446b454542f068d6b6,
+    type: 3}
+  muzzleVelocity: {x: 100, y: 0}
+  recoil: 0
+  cooldown: 0
+  impactForce: 0
+  powerful: 0
+  fuseTime: 0
+  explosionForce: 0
+  explosionRadius: 0

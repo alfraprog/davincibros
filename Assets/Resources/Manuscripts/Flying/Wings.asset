@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 910d5cde2d3526fceadf4ce44218cf21, type: 3}
+  m_Name: Wings
+  m_EditorClassIdentifier: 
+  title: Basic Wings
+  description: Small wings
+  imagePath: Manuscripts/Images/default
+  backgroundPath: Manuscripts/Backgrounds/default
+  sprite: {fileID: 6109993770149628137, guid: 720ae66ee45fcee468b3dd4cc777780b, type: 3}
+  flyMode: 0
+  force: {x: 0, y: 4000}
+  staminaUsage: 5
+  staminaRecoveryRate: 20
+  maxStamina: 100
+  cooldown: 0.5
+  rampUpTime: 0
