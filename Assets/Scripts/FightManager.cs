@@ -12,16 +12,10 @@ public class FightManager : MonoBehaviour
     void Start()
     {
         tanks = GameObject.FindObjectsOfType<Tanks.AbstractTank>();
-        if (tanks.Length == 2)
-        {
-
-            SetupTank(tanks[1], GameManager.Instance.tankConfigP2);
-        }
-
         foreach (Tanks.AbstractTank t in tanks)
         {
-            t.SetFightManager(this);
-            t.Init();
+
+
             if (t.player == Player.Player1)
             {
                 SetupTank(t, GameManager.Instance.tankConfigP1);
@@ -29,6 +23,8 @@ public class FightManager : MonoBehaviour
             {
                 SetupTank(t, GameManager.Instance.tankConfigP2);
             }
+            t.SetFightManager(this);
+            t.Init();
         }
         AudioEngine.PlaySound(Sounds.StartHorn);
     }
