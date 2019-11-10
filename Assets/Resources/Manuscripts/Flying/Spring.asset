@@ -12,15 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 910d5cde2d3526fceadf4ce44218cf21, type: 3}
   m_Name: Spring
   m_EditorClassIdentifier: 
-  title: 
+  title: Spring
   description: 
   imagePath: 
   backgroundPath: 
   sprite: {fileID: 1246628439238951197, guid: ff5870cd443ac4f4b9e676930d8a4fa7, type: 3}
   flyMode: 0
-  force: {x: 0, y: 0}
-  staminaUsage: 0
-  staminaRecoveryRate: 0
-  maxStamina: 0
-  cooldown: 0
+  force: {x: 0, y: 8000}
+  staminaUsage: 20
+  staminaRecoveryRate: 5
+  maxStamina: 100
+  cooldown: 3
   rampUpTime: 0
+  sound: 1

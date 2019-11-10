@@ -17,6 +17,7 @@ public class WeaponManuscript : AbstractManuscript
     public float cooldown;
     public float impactForce;
     public bool powerful;
+    public bool playSound;
 
     public float fuseTime;
     public float explosionForce;

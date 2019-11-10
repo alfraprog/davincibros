@@ -35,6 +35,8 @@ namespace TankComponents
 
         private bool initialized;
 
+        public FlyingManuscript manuscript;
+
         public void InitFromManuscript(FlyingManuscript manuscript)
         {
             flyMode = manuscript.flyMode;
@@ -59,6 +61,7 @@ namespace TankComponents
             {
                 GameObject.Instantiate(manuscript.sprite, transform);
             }
+            this.manuscript = manuscript;
         }
 
         public void Fly(Rigidbody body, float input)
@@ -106,7 +109,7 @@ namespace TankComponents
                 body.AddForce(new Vector3(0, force.y, force.x), ForceMode.Impulse);
                 currentStamina -= staminaUsage;
                 timeUntilReady = cooldown;
-                AudioEngine.PlaySound(Sounds.LoudFlap);
+                PlaySound();
             } else
             {
                 RecoverStamina();
@@ -123,6 +126,7 @@ namespace TankComponents
 
                 body.AddForce(new Vector3(0, force.y * rampupParameter, force.x * rampupParameter), ForceMode.Force);
                 currentStamina -= requiredStamina;
+                PlaySound();
             } else if (rampupParameter >= 0.001f)
             {
                 rampupParameter = Mathf.SmoothDamp(rampupParameter, 0, ref rampupVelocity, rampUpTime);
@@ -146,6 +150,7 @@ namespace TankComponents
                     currentStamina -= requiredStamina;
                     timeUntilReady = cooldown;
                     continuousEnabled = true;
+                    PlaySound();
                 }
 
             } else
@@ -157,6 +162,23 @@ namespace TankComponents
             {
                 RecoverStamina();
                 ProgressCooldown();
+            }
+        }
+
+        private void PlaySound()
+        {
+            switch(manuscript.sound)
+            {
+                case FlyingManuscript.Sound.Rocket:
+                    AudioEngine.PlaySound(Sounds.FireWheee);
+                    break;
+                case FlyingManuscript.Sound.Screw:
+                    break;
+                case FlyingManuscript.Sound.Spring:
+                    break;
+                case FlyingManuscript.Sound.Wings:
+                    AudioEngine.PlaySound(Sounds.LoudFlap);
+                    break;
             }
         }
     }

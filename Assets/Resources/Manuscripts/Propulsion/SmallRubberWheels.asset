@@ -17,5 +17,5 @@ MonoBehaviour:
   imagePath: 
   backgroundPath: 
   sprite: {fileID: 4679397075391954161, guid: 8c916b8f9208d9843a81eae83a7ae2d0, type: 3}
-  driveForce: 0
-  brakeForce: 0
+  driveForce: 3500
+  brakeForce: 5500

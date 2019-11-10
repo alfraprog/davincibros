@@ -24,3 +24,4 @@ MonoBehaviour:
   maxStamina: 100
   cooldown: 0.5
   rampUpTime: 0
+  sound: 2

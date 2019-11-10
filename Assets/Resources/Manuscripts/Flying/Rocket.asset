@@ -12,15 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 910d5cde2d3526fceadf4ce44218cf21, type: 3}
   m_Name: Rocket
   m_EditorClassIdentifier: 
-  title: 
+  title: Rocket
   description: 
   imagePath: 
   backgroundPath: 
   sprite: {fileID: 8790480139576539577, guid: 4c4c3204d018e304db40e6d0ca22206d, type: 3}
-  flyMode: 0
-  force: {x: 0, y: 0}
-  staminaUsage: 0
-  staminaRecoveryRate: 0
-  maxStamina: 0
-  cooldown: 0
+  flyMode: 2
+  force: {x: 0, y: 5000}
+  staminaUsage: 20
+  staminaRecoveryRate: 10
+  maxStamina: 100
+  cooldown: 10
   rampUpTime: 0
+  sound: 0

@@ -23,8 +23,9 @@ MonoBehaviour:
   muzzleVelocity: {x: 50, y: 0}
   recoil: 500
   cooldown: 0.5
-  impactForce: 5000
+  impactForce: 4000
   powerful: 0
+  playSound: 1
   fuseTime: 0
   explosionForce: 0
   explosionRadius: 0

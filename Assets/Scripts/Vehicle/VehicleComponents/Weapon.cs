@@ -74,14 +74,18 @@ namespace TankComponents
 
             projectileInstance.GetComponent<CanonBall>().impactForce = manuscript.impactForce;
 
-            if (manuscript.powerful)
+            if(manuscript.playSound)
             {
-                AudioEngine.PlaySound(Sounds.CanonShotPowerful);
+                if (manuscript.powerful)
+                {
+                    AudioEngine.PlaySound(Sounds.CanonShotPowerful);
+                }
+                else
+                {
+                    AudioEngine.PlaySound(Sounds.CanonShot);
+                }
             }
-            else
-            {
-                AudioEngine.PlaySound(Sounds.CanonShot);
-            }
+
 
         }
 
