@@ -6,7 +6,7 @@ using static GameManager;
 
 namespace Tanks
 {
-    public class AbstractTank : MonoBehaviour
+    public abstract class AbstractTank : MonoBehaviour
     {
 
 
@@ -24,6 +24,8 @@ namespace Tanks
 
         private FightManager fightManager;
         protected Rigidbody body;
+
+        public abstract void Init();
 
         protected void InitBaseComponents()
         {

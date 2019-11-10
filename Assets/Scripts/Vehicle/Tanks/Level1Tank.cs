@@ -20,7 +20,7 @@ namespace Tanks
 
         }
 
-        void Awake()
+        public override void Init()
         {
 
             if (frontWeapon && weaponManuscripts.Length > 0 && weaponManuscripts[0])

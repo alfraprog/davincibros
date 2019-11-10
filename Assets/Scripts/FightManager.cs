@@ -6,6 +6,7 @@ using static GameManager;
 
 public class FightManager : MonoBehaviour
 {
+    public PropulsionManuscript basicPropulsion;
     public Tanks.AbstractTank[] tanks;
     // Start is called before the first frame update
     void Start()
@@ -13,13 +14,21 @@ public class FightManager : MonoBehaviour
         tanks = GameObject.FindObjectsOfType<Tanks.AbstractTank>();
         if (tanks.Length == 2)
         {
-            SetupTank(tanks[0], GameManager.Instance.tankConfigP1);
+
             SetupTank(tanks[1], GameManager.Instance.tankConfigP2);
         }
 
         foreach (Tanks.AbstractTank t in tanks)
         {
             t.SetFightManager(this);
+            t.Init();
+            if (t.player == Player.Player1)
+            {
+                SetupTank(t, GameManager.Instance.tankConfigP1);
+            } else
+            {
+                SetupTank(t, GameManager.Instance.tankConfigP2);
+            }
         }
         AudioEngine.PlaySound(Sounds.StartHorn);
     }
@@ -48,6 +57,11 @@ public class FightManager : MonoBehaviour
 
         if (tconf.wheel_left != null) tank.propulsionManuscript = (PropulsionManuscript)tconf.wheel_left;
         if (tconf.wheel_right != null) tank.propulsionManuscript = (PropulsionManuscript)tconf.wheel_right;
+
+        if (tank.propulsionManuscript == null)
+        {
+            tank.propulsionManuscript = basicPropulsion;
+        }
     }
 
     private void SetupTank2(Tanks.Level2Tank tank, GameManager.TankConfig tconf)
@@ -68,6 +82,11 @@ public class FightManager : MonoBehaviour
 
         if (tconf.wheel_left != null) tank.propulsionManuscript = (PropulsionManuscript)tconf.wheel_left;
         if (tconf.wheel_right != null) tank.propulsionManuscript = (PropulsionManuscript)tconf.wheel_right;
+
+        if (tank.propulsionManuscript == null)
+        {
+            tank.propulsionManuscript = basicPropulsion;
+        }
     }
 
     // Update is called once per frame

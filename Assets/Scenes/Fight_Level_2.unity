@@ -303,6 +303,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b14d1347ac2e0141ba8e09c14bbc5b8, type: 3}
+--- !u!4 &171160428 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2330893311450630398, guid: 3b14d1347ac2e0141ba8e09c14bbc5b8,
+    type: 3}
+  m_PrefabInstance: {fileID: 171160427}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &221814532
 GameObject:
   m_ObjectHideFlags: 0
@@ -392,8 +398,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targets:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 171160428}
+  - {fileID: 330706435}
   maxY: 2.3
   minY: -2.3
   responsiveness: 0.3
@@ -514,6 +520,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b14d1347ac2e0141ba8e09c14bbc5b8, type: 3}
+--- !u!4 &330706435 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2330893311450630398, guid: 3b14d1347ac2e0141ba8e09c14bbc5b8,
+    type: 3}
+  m_PrefabInstance: {fileID: 330706434}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &346856416
 GameObject:
   m_ObjectHideFlags: 0
@@ -999,6 +1011,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16ba642dd0beeea4f8fe523c6679909e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  basicPropulsion: {fileID: 11400000, guid: 37e4392473db0354e8eaab068303bc99, type: 2}
   tanks: []
 --- !u!81 &1070888746
 AudioListener:
