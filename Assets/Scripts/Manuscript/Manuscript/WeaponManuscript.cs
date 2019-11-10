@@ -21,5 +21,5 @@ public class WeaponManuscript : AbstractManuscript
     public float fuseTime;
     public float explosionForce;
     public float explosionRadius;
-
+    public ParticleSystem launchEffect;
 }
