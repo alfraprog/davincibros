@@ -18,7 +18,7 @@ MonoBehaviour:
   backgroundPath: 
   projectile: {fileID: 772059751735383936, guid: 8c1bcca792c163449a3a761a23d069fd,
     type: 3}
-  muzzleVelocity: {x: 50, y: 0}
-  recoil: 2000
-  cooldown: 3
-  impactForce: 8000
+  muzzleVelocity: {x: 30, y: 0}
+  recoil: 3000
+  cooldown: 2
+  impactForce: 7000
