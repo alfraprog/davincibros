@@ -44,3 +44,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _persistent: 1
+  manuscriptSelectionScene: 
+  buildingScene: 
+  fightScenes:
+  - Fight_Level_1
+  gameOverScene: GameOver
+  gamePhase: 0
+  fightStage: 0
+  fightWinners: 
