@@ -27,7 +27,14 @@ public class FightManager : MonoBehaviour
     {
         tank.gameObject.SetActive(false);
         Debug.Log(tank.player + " died!");
+        GameObject audioManger = GameObject.FindGameObjectWithTag("AudioManager");
+        if (audioManger != null)
+        {
+            audioManger.GetComponent<AudioEngine>().TransitionSong();
+        }
         StartCoroutine(LoadLevel(2f, SceneManager.GetActiveScene()));
+
+
     }
 
     private IEnumerator LoadLevel(float delay, Scene scene)
