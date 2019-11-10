@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Arrow Launcher
   description: 
-  imagePath: 
-  backgroundPath: 
+  imagePath: Graphics/Craft_elements/graphicComponents_weapon_5_arrow
+  backgroundPath: Manuscripts/Backgrounds/Template_card_weapon
   sprite: {fileID: 1278296752734491539, guid: 384e399376407ff4d860a6c2cc5d43f8, type: 3}
   type: 0
   projectile: {fileID: 3760739680567970656, guid: acb90489182b4c0428ed53acab6e4d8e,

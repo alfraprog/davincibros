@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 910d5cde2d3526fceadf4ce44218cf21, type: 3}
   m_Name: Spring
   m_EditorClassIdentifier: 
-  title: 
+  title: Spring
   description: 
-  imagePath: 
-  backgroundPath: 
+  imagePath: Graphics/Craft_elements/graphicComponents_fly_4_spring
+  backgroundPath: Manuscripts/Backgrounds/Template_card_fly
   sprite: {fileID: 1246628439238951197, guid: ff5870cd443ac4f4b9e676930d8a4fa7, type: 3}
   flyMode: 0
   force: {x: 0, y: 0}

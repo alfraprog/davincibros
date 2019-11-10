@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Light Canon
   description: Small but shoots fast
-  imagePath: Manuscripts/Images/default
-  backgroundPath: Manuscripts/Backgrounds/default
+  imagePath: Graphics/Craft_elements/graphicComponents_weapon_2_smallCannon
+  backgroundPath: Manuscripts/Backgrounds/Template_card_weapon
   sprite: {fileID: 1534463634857429921, guid: fad5e1d604b6fcb4f944168f52ba5a7d, type: 3}
   type: 0
   projectile: {fileID: 772059751735383936, guid: 8c1bcca792c163449a3a761a23d069fd,
@@ -28,3 +28,4 @@ MonoBehaviour:
   fuseTime: 0
   explosionForce: 0
   explosionRadius: 0
+  launchEffect: {fileID: 0}

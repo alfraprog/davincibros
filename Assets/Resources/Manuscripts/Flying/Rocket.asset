@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 910d5cde2d3526fceadf4ce44218cf21, type: 3}
   m_Name: Rocket
   m_EditorClassIdentifier: 
-  title: 
+  title: Rocket
   description: 
-  imagePath: 
-  backgroundPath: 
+  imagePath: Graphics/Craft_elements/graphicComponents_fly_3_rocket
+  backgroundPath: Manuscripts/Backgrounds/Template_card_fly
   sprite: {fileID: 8790480139576539577, guid: 4c4c3204d018e304db40e6d0ca22206d, type: 3}
   flyMode: 0
   force: {x: 0, y: 0}

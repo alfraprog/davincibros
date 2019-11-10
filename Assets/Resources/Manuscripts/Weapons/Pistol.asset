@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Pistol
   description: 
-  imagePath: 
-  backgroundPath: 
+  imagePath: Graphics/Craft_elements/graphicComponents_weapon_3_pistol
+  backgroundPath: Manuscripts/Backgrounds/Template_card_weapon
   sprite: {fileID: 393054262487454080, guid: 776d83b75cfaf774d8be07d3a9c9e8c6, type: 3}
   type: 0
   projectile: {fileID: 4051378570779469345, guid: 88216927cf5fa8446b454542f068d6b6,
@@ -28,3 +28,4 @@ MonoBehaviour:
   fuseTime: 0
   explosionForce: 0
   explosionRadius: 0
+  launchEffect: {fileID: 0}

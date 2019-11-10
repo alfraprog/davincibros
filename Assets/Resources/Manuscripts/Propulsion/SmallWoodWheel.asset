@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6841b016ed9418822854dc7817ecc96d, type: 3}
   m_Name: SmallWoodWheel
   m_EditorClassIdentifier: 
-  title: Small Wooden Wheels
+  title: Wood
   description: 
-  imagePath: 
-  backgroundPath: 
+  imagePath: Graphics/Craft_elements/graphicComponents_wheel_1_woodSmall
+  backgroundPath: Manuscripts/Backgrounds/Template_card_wheels
   sprite: {fileID: 49842252757415498, guid: 648378bcb02484740b672b51e6079491, type: 3}
   driveForce: 1500
   brakeForce: 3000
