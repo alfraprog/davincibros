@@ -14,12 +14,15 @@ public class DockSelector : MonoBehaviour
     public GameObject dockIndicatorSelectablePrefab; // selectable slots
     public GameObject dockIndicatorSelectedPrefab; // currently selected slot
 
+    public Transform armor_L0;
     public Transform weapon_L0_Right;
     public Transform weapon_L0_Left;
 
+    public Transform armor_L1;
     public Transform weapon_L1_Right;
     public Transform weapon_L1_Left;
 
+    public Transform armor_L2;
     public Transform weapon_L2_Right;
     public Transform weapon_L2_Left;
 
@@ -118,7 +121,7 @@ public class DockSelector : MonoBehaviour
             }
             else
             {
-                if ((selectedLayer == layer) && (selectedSlot == dir))
+                if ((selectedLayer == layer) && ((dir < 0) || (selectedSlot == dir)))
                     go = GameObject.Instantiate(dockIndicatorSelectedPrefab);
                 else
                     go = GameObject.Instantiate(dockIndicatorSelectablePrefab);
@@ -141,15 +144,18 @@ public class DockSelector : MonoBehaviour
             Destroy(i);
         }
         indicators.Clear();
+        indicators.Add(createMarker(armor_L0, "a", 0, -1, ref first));
         indicators.Add(createMarker(weapon_L0_Left, "w", 0, 0, ref first));
         indicators.Add(createMarker(weapon_L0_Right, "w", 0, 1, ref first));
         if (selectionPhase >= 1)
         {
+            indicators.Add(createMarker(armor_L1, "a", 1, -1, ref first));
             indicators.Add(createMarker(weapon_L1_Left, "w", 1, 0, ref first));
             indicators.Add(createMarker(weapon_L1_Right, "w", 1, 1, ref first));
         }
         if (selectionPhase >= 2)
         {
+            indicators.Add(createMarker(armor_L2, "a", 2, -1, ref first));
             indicators.Add(createMarker(weapon_L2_Left, "w", 2, 0, ref first));
             indicators.Add(createMarker(weapon_L2_Right, "w", 2, 1, ref first));
         }
