@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Heavy Canon
   description: 
-  imagePath: 
-  backgroundPath: 
+  imagePath: Manuscripts/Images/default
+  backgroundPath: Manuscripts/Backgrounds/default
   projectile: {fileID: 772059751735383936, guid: 8c1bcca792c163449a3a761a23d069fd,
     type: 3}
   muzzleVelocity: {x: 50, y: 0}

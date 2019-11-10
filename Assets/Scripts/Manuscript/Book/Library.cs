@@ -1,9 +1,13 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Library : MonoBehaviour
 {
+    public bool loaded = false;
+
+    public List<AbstractManuscript> manuscripts;
     public WeaponManuscript[] weaponManuscripts;
     public FlyingManuscript[] flyingManuscripts;
     public PropulsionManuscript[] propulsionManuscripts;
@@ -15,8 +19,46 @@ public class Library : MonoBehaviour
         flyingManuscripts = Resources.LoadAll<FlyingManuscript>("Manuscripts/Flying");
         propulsionManuscripts = Resources.LoadAll<PropulsionManuscript>("Manuscripts/Propulsion");
         armorManuscripts = Resources.LoadAll<ArmorManuscript>("Manuscripts/Armor");
+        
+        manuscripts = new List<AbstractManuscript>();
+        manuscripts.AddRange(weaponManuscripts);
+        manuscripts.AddRange(flyingManuscripts);
+        manuscripts.AddRange(propulsionManuscripts);
+        manuscripts.AddRange(armorManuscripts);
 
-        Debug.Log("Loaded library");
+        loaded=true;
     }
 
+    public Book RandomBook(int size)
+    {
+        if(size > manuscripts.Count)
+        {
+            throw new Exception("Not enough manuscript to build a book");
+        }
+
+        int[] indexes = new int[size];
+        int i=0;
+        System.Random random = new System.Random();
+
+        while(i<0)
+        {
+            indexes[i] = random.Next(0, manuscripts.Count);
+            bool picked = false;
+            for(int j=0; j<0; j++)
+            {
+                picked = picked || j==i;
+            }
+            if(!picked)
+            {
+                i++;
+            }
+        }
+
+        Book book = new Book();
+        foreach(int index in indexes )
+        {
+            book.AddManuscript(manuscripts[index]);
+        }
+        return book;
+    }
 }

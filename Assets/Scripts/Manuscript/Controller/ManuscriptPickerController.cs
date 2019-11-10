@@ -5,6 +5,20 @@ using UnityEngine.UI;
 public class ManuscriptPickerController : MonoBehaviour
 {
     public GameObject manuscriptGameObject;
+    public GameObject libraryGameObject;
+
+    public Book book;
+
+    void Update() {
+        if(book == null)
+        {
+            Library library = libraryGameObject.GetComponent<Library>();
+            if(library.loaded)
+            {
+                PickInBook(library.RandomBook(2), 1);
+            }
+        }
+    }
 
     public void PickInBook(Book book, int manuscriptPerPlayer)
     {

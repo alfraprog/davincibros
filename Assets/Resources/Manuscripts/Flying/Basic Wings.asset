@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Basic Wings
   description: Small wings
-  imagePath: 
-  backgroundPath: 
+  imagePath: Manuscripts/Images/default
+  backgroundPath: Manuscripts/Backgrounds/default
   flyMode: 0
   force: {x: 0, y: 2000}
   staminaUsage: 10
