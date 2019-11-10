@@ -1,14 +1,8 @@
 fileFormatVersion: 2
-<<<<<<< HEAD:Assets/VFXDefaultResources.asset.meta
-guid: 088af36b2e8c907e0b6f10680ecb76d2
-NativeFormatImporter:
-=======
 guid: 99b0a55b38f819a4cb34cf3f2a12047e
 folderAsset: yes
 DefaultImporter:
->>>>>>> 06578b1f134ccb8cebce50c1e806b02de45f34dd:Assets/Resources/Manuscripts/Armor.meta
   externalObjects: {}
-  mainObjectFileID: 11400000
   userData: 
   assetBundleName: 
   assetBundleVariant: 
