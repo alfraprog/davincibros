@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7087636714957316009}
   - component: {fileID: 5939701763760748892}
   m_Layer: 0
-  m_Name: CannonLaunchSmoke
+  m_Name: SmallCannonLaunchSmoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,8 +28,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1735571590014134449}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -601,7 +600,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 8
+    maxNumParticles: 5
     size3D: 0
     rotation3D: 0
     gravityModifier:
@@ -1026,7 +1025,7 @@ ParticleSystem:
           m_PreInfinity: 2
           m_PostInfinity: 2
           m_RotationOrder: 4
-      cycleCount: 1
+      cycleCount: 5
       repeatInterval: 0.1
       probability: 1
   SizeModule:
@@ -1034,7 +1033,7 @@ ParticleSystem:
     curve:
       serializedVersion: 2
       minMaxState: 1
-      scalar: 10
+      scalar: 5
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -1050,12 +1049,12 @@ ParticleSystem:
           outWeight: 0.33333334
         - serializedVersion: 3
           time: 1
-          value: 1
-          inSlope: 2.3511484
-          outSlope: 2.3511484
+          value: 0.5540549
+          inSlope: 1.2961906
+          outSlope: 1.2961906
           tangentMode: 0
           weightedMode: 0
-          inWeight: 0.1020409
+          inWeight: 0.18842672
           outWeight: 0.33333334
         m_PreInfinity: 2
         m_PostInfinity: 2
@@ -4812,83 +4811,3 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!1001 &2199431948666563652
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 472894033428415733}
-    m_Modifications:
-    - target: {fileID: 8522857845065782613, guid: 5d5c10d78a077f74486d390b7def99bb,
-        type: 3}
-      propertyPath: m_Name
-      value: SmallCannonLaunchSmoke
-      objectReference: {fileID: 0}
-    - target: {fileID: 472894033428415733, guid: 5d5c10d78a077f74486d390b7def99bb,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 7.4104424
-      objectReference: {fileID: 0}
-    - target: {fileID: 472894033428415733, guid: 5d5c10d78a077f74486d390b7def99bb,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 8.099709
-      objectReference: {fileID: 0}
-    - target: {fileID: 472894033428415733, guid: 5d5c10d78a077f74486d390b7def99bb,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 10.841444
-      objectReference: {fileID: 0}
-    - target: {fileID: 472894033428415733, guid: 5d5c10d78a077f74486d390b7def99bb,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 472894033428415733, guid: 5d5c10d78a077f74486d390b7def99bb,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 472894033428415733, guid: 5d5c10d78a077f74486d390b7def99bb,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 472894033428415733, guid: 5d5c10d78a077f74486d390b7def99bb,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 472894033428415733, guid: 5d5c10d78a077f74486d390b7def99bb,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 472894033428415733, guid: 5d5c10d78a077f74486d390b7def99bb,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 472894033428415733, guid: 5d5c10d78a077f74486d390b7def99bb,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 472894033428415733, guid: 5d5c10d78a077f74486d390b7def99bb,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7087636714957316009, guid: 5d5c10d78a077f74486d390b7def99bb,
-        type: 3}
-      propertyPath: SizeModule.curve.scalar
-      value: 10
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 5d5c10d78a077f74486d390b7def99bb, type: 3}
---- !u!4 &1735571590014134449 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 472894033428415733, guid: 5d5c10d78a077f74486d390b7def99bb,
-    type: 3}
-  m_PrefabInstance: {fileID: 2199431948666563652}
-  m_PrefabAsset: {fileID: 0}
