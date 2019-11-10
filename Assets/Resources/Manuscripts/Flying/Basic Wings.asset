@@ -17,9 +17,9 @@ MonoBehaviour:
   imagePath: Manuscripts/Images/default
   backgroundPath: Manuscripts/Backgrounds/default
   flyMode: 0
-  force: {x: 0, y: 2000}
-  staminaUsage: 10
-  staminaRecoveryRate: 10
+  force: {x: 0, y: 4000}
+  staminaUsage: 5
+  staminaRecoveryRate: 20
   maxStamina: 100
-  cooldown: 0.7
+  cooldown: 0.5
   rampUpTime: 0

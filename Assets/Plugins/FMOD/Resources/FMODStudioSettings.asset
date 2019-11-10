@@ -18,9 +18,9 @@ MonoBehaviour:
   sourceProjectPath: ../audio/fmod/davincibros/davincibros.fspro
   sourceBankPath: Assets\FMOD\Desktop
   SourceBankPathUnformatted: 
-  AutomaticEventLoading: 1
-  BankLoadType: 0
-  AutomaticSampleLoading: 0
+  AutomaticEventLoading: 0
+  BankLoadType: 1
+  AutomaticSampleLoading: 1
   EncryptionKey: 
   ImportType: 0
   TargetAssetPath: 
@@ -76,7 +76,18 @@ MonoBehaviour:
   - Platform: 20
     Value: 32
   Plugins: []
+<<<<<<< HEAD
   MasterBanks: []
   Banks: []
   BanksToLoad: []
+=======
+  MasterBanks:
+  - Master
+  Banks:
+  - SoundEffects
+  BanksToLoad:
+  - C:/Users/alex/Desktop/gamejam2019/davincibros/Master.bank
+  - C:/Users/alex/Desktop/gamejam2019/davincibros/Master.strings.bank
+  - C:/Users/alex/Desktop/gamejam2019/davincibros/SoundEffects.bank
+>>>>>>> 06578b1f134ccb8cebce50c1e806b02de45f34dd
   LiveUpdatePort: 9264

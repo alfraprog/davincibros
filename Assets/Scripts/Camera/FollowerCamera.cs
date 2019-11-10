@@ -6,7 +6,8 @@ public class FollowerCamera : MonoBehaviour
 {
 
     public List<Transform> targets;
-    public Vector3 offset = new Vector3(0, 0, -10);
+    public float maxY = 0;
+    public float minY = 0;
     public float responsiveness = 0.3f;
 
     private Vector3 velocity = Vector3.zero;
@@ -19,14 +20,17 @@ public class FollowerCamera : MonoBehaviour
 
     private void OnValidate()
     {
-        transform.position = GetAveragePositionOfTargets() + offset;
+        float y = Mathf.Clamp(GetAveragePositionOfTargets().y, minY, maxY);
+        Vector3 newPos = new Vector3(transform.localPosition.x, y, transform.localPosition.z);
+        transform.localPosition = newPos;
     }
 
     // Update is called once per frame
     void LateUpdate()
     {
-        Vector3 targetPosition = GetAveragePositionOfTargets() + offset;
-        transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, responsiveness);
+        float y = Mathf.Clamp(GetAveragePositionOfTargets().y, minY, maxY);
+        Vector3 targetPosition = new Vector3(transform.localPosition.x, y, transform.localPosition.z);
+        transform.localPosition = Vector3.SmoothDamp(transform.localPosition, targetPosition, ref velocity, responsiveness);
     }
 
     private Vector3 GetAveragePositionOfTargets()
