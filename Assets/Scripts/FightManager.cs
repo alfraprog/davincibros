@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using static GameManager;
 
 public class FightManager : MonoBehaviour
 {
@@ -27,19 +28,28 @@ public class FightManager : MonoBehaviour
     {
         tank.gameObject.SetActive(false);
         Debug.Log(tank.player + " died!");
-        GameObject audioManger = GameObject.FindGameObjectWithTag("AudioManager");
-        if (audioManger != null)
-        {
-            audioManger.GetComponent<AudioEngine>().TransitionSong();
-        }
-        StartCoroutine(LoadLevel(2f, SceneManager.GetActiveScene()));
+        Player winner = GetWinner(tank.player);
+        GameManager.Instance.TransitionSong();
+        StartCoroutine(EndFight(2f, winner));
 
 
     }
 
-    private IEnumerator LoadLevel(float delay, Scene scene)
+    private Player GetWinner(Player loser)
+    {
+        switch(loser)
+        {
+            case Player.Player1:
+                return Player.Player2;
+            case Player.Player2:
+                return Player.Player1;
+        }
+        return Player.Player1;
+    }
+
+    private IEnumerator EndFight(float delay, Player winner)
     {
         yield return new WaitForSeconds(delay);
-        SceneManager.LoadScene(scene.name);
+        GameManager.Instance.EndFightPhase(winner);
     }
 }
