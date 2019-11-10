@@ -1692,5 +1692,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1364975899070778112, guid: 2bd03f4c0d4de4f4e91d0d5bfc7d168e,
+        type: 3}
+      propertyPath: fightScenes.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1364975899070778112, guid: 2bd03f4c0d4de4f4e91d0d5bfc7d168e,
+        type: 3}
+      propertyPath: fightScenes.Array.data[0]
+      value: Fight_Level_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1364975899070778112, guid: 2bd03f4c0d4de4f4e91d0d5bfc7d168e,
+        type: 3}
+      propertyPath: gameOverScene
+      value: GameOver
+      objectReference: {fileID: 0}
+    - target: {fileID: 1364975899070778112, guid: 2bd03f4c0d4de4f4e91d0d5bfc7d168e,
+        type: 3}
+      propertyPath: gamePhase
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2bd03f4c0d4de4f4e91d0d5bfc7d168e, type: 3}

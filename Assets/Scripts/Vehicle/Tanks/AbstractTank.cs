@@ -2,16 +2,13 @@
 using System.Collections.Generic;
 using TankComponents;
 using UnityEngine;
+using static GameManager;
 
 namespace Tanks
 {
     public class AbstractTank : MonoBehaviour
     {
-        public enum Player
-        {
-            Player1,
-            Player2
-        }
+
 
         public Player player = Player.Player1;
 
