@@ -68,7 +68,11 @@ namespace Tanks
             if (collision.gameObject.CompareTag("Death"))
             {
                 fightManager.RegisterDeath(this);
-            }
+                AudioEngine.PlaySound(Sounds.FireWheeeHit);
+            } else if (collision.gameObject.CompareTag("Player"))
+            {
+                AudioEngine.PlaySound(Sounds.ImpactTanks);
+            } 
         }
 
         private string GetInputSuffix()

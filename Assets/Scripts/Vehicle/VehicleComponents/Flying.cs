@@ -97,6 +97,7 @@ namespace TankComponents
                 body.AddForce(new Vector3(0, force.y, force.x), ForceMode.Impulse);
                 currentStamina -= staminaUsage;
                 timeUntilReady = cooldown;
+                AudioEngine.PlaySound(Sounds.LoudFlap);
             } else
             {
                 RecoverStamina();

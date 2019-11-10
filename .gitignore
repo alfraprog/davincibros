@@ -1,10 +1,9 @@
 ### fmod ###
 
-fmod_editor.log
+*.log
 fmod.log
 FMODStudioCache.asset
 Assets/FMODStudioCache.asset
-Assets/Resources/FMODStudioSettings.asset
 
 
 [Ll]ibrary/
