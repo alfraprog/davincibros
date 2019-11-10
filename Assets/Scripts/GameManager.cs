@@ -37,6 +37,12 @@ public class GameManager : Singleton<GameManager>
         
     }
 
+    public void StartGame() {
+        gamePhase = GamePhase.ManuscriptSelect;
+        TransitionSong();
+        LoadSceneForGamePhase();
+    }
+
     // Update is called once per frame
     void Update()
     {
