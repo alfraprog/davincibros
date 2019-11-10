@@ -25,6 +25,7 @@ MonoBehaviour:
   cooldown: 3
   impactForce: 0
   powerful: 0
+  playSound: 0
   fuseTime: 2
   explosionForce: 8000
   explosionRadius: 5

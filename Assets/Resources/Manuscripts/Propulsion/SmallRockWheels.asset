@@ -17,5 +17,5 @@ MonoBehaviour:
   imagePath: Graphics/Craft_elements/graphicComponents_wheel_3_rockSmall
   backgroundPath: Manuscripts/Backgrounds/Template_card_wheels
   sprite: {fileID: 8631839151737428272, guid: bf54c123cd4f07e4c9eaf5574d063be0, type: 3}
-  driveForce: 0
-  brakeForce: 0
+  driveForce: 2500
+  brakeForce: 4000

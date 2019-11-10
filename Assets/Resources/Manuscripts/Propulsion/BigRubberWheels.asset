@@ -17,5 +17,5 @@ MonoBehaviour:
   imagePath: Graphics/Craft_elements/graphicComponents_wheel_6_rubberBig
   backgroundPath: Manuscripts/Backgrounds/Template_card_wheels
   sprite: {fileID: 3160427747121604805, guid: 255307214a14e1e4f8981a12a9dbd3c0, type: 3}
-  driveForce: 0
-  brakeForce: 0
+  driveForce: 4000
+  brakeForce: 6000

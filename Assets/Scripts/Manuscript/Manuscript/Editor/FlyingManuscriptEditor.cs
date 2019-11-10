@@ -43,6 +43,10 @@ public class FlyingEditor : UnityEditor.Editor
         {
             manuscript.rampUpTime = EditorGUILayout.FloatField("Ramp up time", manuscript.rampUpTime);
         }
+
+        EditorGUILayout.Space();
+        manuscript.sound = (FlyingManuscript.Sound)EditorGUILayout.EnumPopup("Sound Effect", manuscript.sound);
+
         EditorUtility.SetDirty(target);
 
     }

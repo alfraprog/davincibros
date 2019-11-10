@@ -121,7 +121,9 @@ public class DockSelector : MonoBehaviour
             }
             else
             {
-                if ((selectedLayer == layer) && ((dir < 0) || (selectedSlot == dir)))
+                if (type.Equals("f")) {
+                    go = GameObject.Instantiate(dockIndicatorSelectedPrefab);
+                } else if ((selectedLayer == layer) && ((dir < 0) || (selectedSlot == dir)))
                     go = GameObject.Instantiate(dockIndicatorSelectedPrefab);
                 else
                     go = GameObject.Instantiate(dockIndicatorSelectablePrefab);
@@ -162,5 +164,45 @@ public class DockSelector : MonoBehaviour
         indicators.Add(createMarker(flying, "f", 3, -1, ref first));
         indicators.Add(createMarker(wheel_Left, "p", -1, 0, ref first));
         indicators.Add(createMarker(wheel_Right, "p", -1, 1, ref first));
+    }
+
+    public void placeManuscript(GameManager.TankConfig tconf) {
+        if (manuscriptToPlace is WeaponManuscript)
+        {
+            if (selectedLayer == 0)
+            {
+                if (selectedSlot == 0) tconf.weapon_L0_left = manuscriptToPlace; else tconf.weapon_L0_right = manuscriptToPlace;
+            }
+            else if(selectedLayer == 1)
+            {
+                if (selectedSlot == 0) tconf.weapon_L1_left = manuscriptToPlace; else tconf.weapon_L1_right = manuscriptToPlace;
+            } else if (selectedLayer == 2)
+            {
+                if (selectedSlot == 0) tconf.weapon_L2_left = manuscriptToPlace; else tconf.weapon_L2_right = manuscriptToPlace;
+            }
+        }
+        else if (manuscriptToPlace is FlyingManuscript)
+        {
+            tconf.flight = manuscriptToPlace;
+        }
+        else if (manuscriptToPlace is PropulsionManuscript)
+        {
+                if (selectedSlot == 0) tconf.wheel_left = manuscriptToPlace; else tconf.wheel_right = manuscriptToPlace;
+        }
+        else if (manuscriptToPlace is ArmorManuscript)
+        {
+            if (selectedLayer == 0)
+            {
+                tconf.armor_L0 = manuscriptToPlace;
+            }
+            else if (selectedLayer == 1)
+            {
+                tconf.armor_L1 = manuscriptToPlace;
+            }
+            else if (selectedLayer == 2)
+            {
+                tconf.armor_L2 = manuscriptToPlace;
+            }
+        }
     }
 }

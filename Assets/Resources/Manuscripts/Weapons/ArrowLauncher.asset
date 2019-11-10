@@ -21,10 +21,11 @@ MonoBehaviour:
   projectile: {fileID: 3760739680567970656, guid: acb90489182b4c0428ed53acab6e4d8e,
     type: 3}
   muzzleVelocity: {x: 100, y: 0}
-  recoil: 0
-  cooldown: 0
-  impactForce: 0
+  recoil: 100
+  cooldown: 1
+  impactForce: 2000
   powerful: 0
+  playSound: 0
   fuseTime: 0
   explosionForce: 0
   explosionRadius: 0

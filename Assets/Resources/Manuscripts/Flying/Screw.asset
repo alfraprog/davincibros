@@ -17,10 +17,11 @@ MonoBehaviour:
   imagePath: Graphics/Craft_elements/graphicComponents_fly_2_screw
   backgroundPath: Manuscripts/Backgrounds/Template_card_fly
   sprite: {fileID: 4485485449358654120, guid: 2df9554ae3f1acc459ca6f4396bb07ea, type: 3}
-  flyMode: 0
-  force: {x: 0, y: 0}
-  staminaUsage: 0
-  staminaRecoveryRate: 0
-  maxStamina: 0
+  flyMode: 1
+  force: {x: 0, y: 3000}
+  staminaUsage: 5
+  staminaRecoveryRate: 10
+  maxStamina: 100
   cooldown: 0
-  rampUpTime: 0
+  rampUpTime: 0.5
+  sound: 3

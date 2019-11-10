@@ -35,7 +35,11 @@ public class WeaponManuscriptEditor : UnityEditor.Editor
         if (manuscript.type == WeaponManuscript.Type.Kinetic)
         {
             manuscript.impactForce = EditorGUILayout.FloatField("Impact Force", manuscript.impactForce);
-            manuscript.powerful = EditorGUILayout.Toggle("Powerful", manuscript.powerful);
+            manuscript.playSound = EditorGUILayout.Toggle("PlaySound", manuscript.playSound);
+            if (manuscript.playSound)
+            {
+                manuscript.powerful = EditorGUILayout.Toggle("Powerful", manuscript.powerful);
+            }
         } else
         {
             manuscript.fuseTime = EditorGUILayout.FloatField("Fuse Time", manuscript.fuseTime);
