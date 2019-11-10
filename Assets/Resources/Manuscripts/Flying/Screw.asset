@@ -18,10 +18,10 @@ MonoBehaviour:
   backgroundPath: Manuscripts/Backgrounds/Template_card_fly
   sprite: {fileID: 4485485449358654120, guid: 2df9554ae3f1acc459ca6f4396bb07ea, type: 3}
   flyMode: 1
-  force: {x: 0, y: 3000}
+  force: {x: 0, y: 8000}
   staminaUsage: 5
   staminaRecoveryRate: 10
   maxStamina: 100
   cooldown: 0
-  rampUpTime: 0.5
+  rampUpTime: 0.3
   sound: 3

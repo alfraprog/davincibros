@@ -18,11 +18,12 @@ MonoBehaviour:
   backgroundPath: Manuscripts/Backgrounds/Template_card_weapon
   sprite: {fileID: 7640967437857235125, guid: 7600280b76bc41848b81563eb935837f, type: 3}
   type: 0
-  projectile: {fileID: 0}
-  muzzleVelocity: {x: 0, y: 0}
-  recoil: 0
-  cooldown: 0
-  impactForce: 0
+  projectile: {fileID: 311066503278361764, guid: b349c83fb78cef544a041620dbde30ca,
+    type: 3}
+  muzzleVelocity: {x: 30, y: 0}
+  recoil: 3000
+  cooldown: 2
+  impactForce: 7000
   powerful: 1
   playSound: 1
   fuseTime: 0

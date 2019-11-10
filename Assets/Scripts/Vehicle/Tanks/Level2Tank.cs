@@ -60,6 +60,7 @@ namespace Tanks
         void FixedUpdate()
         {
             Inputs inputs = ReadInput();
+            Debug.Log(player + " Input: Fire Front" + inputs.fireFront + " FireRear: " + inputs.fireRear + " Jump: " + inputs.fly);
 
             //Front weapons
             if (bottomFrontWeapon)
