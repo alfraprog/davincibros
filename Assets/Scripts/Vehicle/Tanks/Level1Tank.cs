@@ -7,22 +7,12 @@ namespace Tanks
 {
     public class Level1Tank : AbstractTank
     {
-        public float mass;
 
-        public Armor armor;
         public Weapon frontWeapon;
         public Weapon rearWeapon;
-        public Propulsion propulsion;
-        public Flying flying;
 
-        public PlayerInput.InputReader inputReader;
-
-        private Rigidbody body;
-
-        public ArmorManuscript armorManuscript;
         public WeaponManuscript[] weaponManuscripts;
-        public PropulsionManuscript propulsionManuscript;
-        public FlyingManuscript flyingManuscript;
+
 
         // Start is called before the first frame update
         void Start()
@@ -32,6 +22,7 @@ namespace Tanks
 
         void Awake()
         {
+
             if (frontWeapon && weaponManuscripts.Length > 0 && weaponManuscripts[0])
             {
                 frontWeapon.InitFromManuscript(weaponManuscripts[0]);
@@ -40,21 +31,7 @@ namespace Tanks
             {
                 rearWeapon.InitFromManuscript(weaponManuscripts[1]);
             }
-            if (flying && flyingManuscript)
-            {
-                flying.InitFromManuscript(flyingManuscript);
-            }
-            if (propulsionManuscript)
-            {
-                propulsion.InitFromManuscript(propulsionManuscript);
-            }
-            body = GetComponent<Rigidbody>();
-            body.mass = mass;
-            if (armor && armorManuscript)
-            {
-                armor.InitFromManuscript(armorManuscript);
-                body.mass += armor.mass;
-            }
+            InitBaseComponents();
 
         }
 
@@ -67,7 +44,7 @@ namespace Tanks
 
         void FixedUpdate()
         {
-            PlayerInput.Inputs inputs = inputReader.ReadInput();
+            Inputs inputs = ReadInput();
             if (frontWeapon)
             {
                 frontWeapon.Fire(body, inputs.fireFront);

@@ -12,7 +12,7 @@ public class FightManager : MonoBehaviour
         tanks = GameObject.FindObjectsOfType<Tanks.AbstractTank>();
         foreach (Tanks.AbstractTank t in tanks)
         {
-            t.fightManager = this;
+            t.SetFightManager(this);
         }
     }
 
@@ -25,7 +25,7 @@ public class FightManager : MonoBehaviour
     public void RegisterDeath(Tanks.AbstractTank tank)
     {
         tank.gameObject.SetActive(false);
-        Debug.Log(tank.playerName + " died!");
+        Debug.Log(tank.player + " died!");
         StartCoroutine(LoadLevel(2f, SceneManager.GetActiveScene()));
     }
 
