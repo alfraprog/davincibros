@@ -23,9 +23,10 @@ MonoBehaviour:
   recoil: 0
   cooldown: 0
   impactForce: 0
-  powerful: 0
-  playSound: 0
+  powerful: 1
+  playSound: 1
   fuseTime: 0
   explosionForce: 0
   explosionRadius: 0
-  launchEffect: {fileID: 0}
+  launchEffect: {fileID: 7087636714957316009, guid: dcc87a2df1349d44ab641b6a5dc9e906,
+    type: 3}
