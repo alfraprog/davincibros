@@ -9,9 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/AlexCardSelection.unity
     guid: fb9dec087012d3348b90b257f3a00a15
   - enabled: 1
-    path: Assets/Scenes/AlexAudioScene.unity
-    guid: 848143aa162291d40a4e96a9a84e9664
-  - enabled: 1
     path: Assets/Scenes/AlexBuildingScene.unity
     guid: c05a8cb120c8bc345bdffdfdd21c596d
+  - enabled: 1
+    path: Assets/Scenes/AlexAudioScene.unity
+    guid: 848143aa162291d40a4e96a9a84e9664
   m_configObjects: {}
