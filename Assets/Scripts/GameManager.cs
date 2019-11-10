@@ -13,20 +13,21 @@ public class GameManager : Singleton<GameManager>
 
     public enum GamePhase
     {
-        CardSelect,
+        ManuscriptSelect,
         Build,
         Fight,
         GameOver
     }
 
-    public string cardSelectionScene;
+    public string manuscriptSelectionScene;
     public string buildingScene;
     public string[] fightScenes;
     public string gameOverScene;
 
-    public GamePhase gamePhase = GamePhase.CardSelect;
+    public GamePhase gamePhase = GamePhase.ManuscriptSelect;
     public int fightStage = 0;
 
+    public List<Player> fightWinners = new List<Player>();
 
     // Start is called before the first frame update
     void Start()
@@ -44,8 +45,8 @@ public class GameManager : Singleton<GameManager>
     {
         switch(gamePhase)
         {
-            case GamePhase.CardSelect:
-                SceneManager.LoadScene(cardSelectionScene);
+            case GamePhase.ManuscriptSelect:
+                SceneManager.LoadScene(manuscriptSelectionScene);
                 break;
             case GamePhase.Build:
                 SceneManager.LoadScene(buildingScene);
@@ -77,7 +78,7 @@ public class GameManager : Singleton<GameManager>
         }
     }
 
-    public void EndCardSelectPhase()
+    public void EndManuscriptSelectPhase()
     {
         //Todo persist any data in the GameManager
         gamePhase = GamePhase.Build;
@@ -95,6 +96,7 @@ public class GameManager : Singleton<GameManager>
 
     public void EndFightPhase(Player winner)
     {
+        fightWinners.Add(winner);
         //Todo persist any data in the GameManager
         fightStage++;
         if (fightStage >= fightScenes.Length)
@@ -103,7 +105,7 @@ public class GameManager : Singleton<GameManager>
 
         } else
         {
-            gamePhase = GamePhase.CardSelect;
+            gamePhase = GamePhase.ManuscriptSelect;
         }
         ResetSong();
         LoadSceneForGamePhase();
