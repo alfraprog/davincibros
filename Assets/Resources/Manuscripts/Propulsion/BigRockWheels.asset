@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6841b016ed9418822854dc7817ecc96d, type: 3}
   m_Name: BigRockWheels
   m_EditorClassIdentifier: 
-  title: Rocket +
+  title: Rock +
   description: 
   imagePath: Graphics/Craft_elements/graphicComponents_wheel_4_rockBig
   backgroundPath: Manuscripts/Backgrounds/Template_card_wheels

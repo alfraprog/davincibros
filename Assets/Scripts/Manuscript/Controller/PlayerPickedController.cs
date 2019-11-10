@@ -18,8 +18,8 @@ public class PlayerPickedController : MonoBehaviour
         for(int i=0;i<size; ++i)
         {
             GameObject gameObject = Instantiate(checkboxGameObject, transform);
-            gameObject.transform.localPosition = new Vector3(x,-50.0f,0.0f);
-            x += alignRight ? -50.0f : 50.0f; 
+            gameObject.transform.localPosition = new Vector3(x,-30.0f,0.0f);
+            x += alignRight ? -20.0f : 20.0f; 
             checkboxes.Add(gameObject);
         }
         CheckedUntil(0);
