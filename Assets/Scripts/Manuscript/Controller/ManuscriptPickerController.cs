@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using PlayerInput;
 using System;
+using System.Collections.Generic;
 
 public class ManuscriptPickerController : MonoBehaviour
 {
@@ -15,14 +16,12 @@ public class ManuscriptPickerController : MonoBehaviour
     public GameObject timerObject;
 
     public Book book;
-    private AbstractManuscript p1Selection;
-    private AbstractManuscript p2Selection;
+    private List<int> p1;
+    private List<int> p2;
     
     private long started;
+    public int manuscriptsPerPlayer = 1;
 
-    private void Start() {
-        started = System.DateTime.Now.Ticks;
-    }
 
     void Update() {
         if(book == null)
@@ -31,7 +30,7 @@ public class ManuscriptPickerController : MonoBehaviour
             if(library.loaded)
             {
                 book = library.RandomBook(2);
-                PickInBook(book, 1);
+                PickInBook(book);
             }
         }
 
@@ -42,7 +41,7 @@ public class ManuscriptPickerController : MonoBehaviour
         }
     }
 
-    public void PickInBook(Book book, int manuscriptPerPlayer)
+    public void PickInBook(Book book)
     {
         float x = -360.0f;
 
@@ -56,28 +55,46 @@ public class ManuscriptPickerController : MonoBehaviour
             controller.FillWith(manuscript);
             x += 180.0f; 
         }
+
+        p1 = new List<int>();
+        p2 = new List<int>();
+        started = System.DateTime.Now.Ticks;
+
     }
 
     void FixedUpdate()
     {
-        p1Selection = SelectFor( player1Inputs.ReadInput(), p1Selection);
-        p2Selection = SelectFor( player2Inputs.ReadInput(), p2Selection);
-        if(p1Selection)
+        if(p1 != null && SelectFor( player1Inputs.ReadInput(), p1))
         {
-            Debug.Log("P1 CARD SELECTED");
-            Debug.Log(p1Selection);
+            Debug.Log("P1 DONE");
+            Debug.Log(p1);
         }
+        /*
+        if(SelectFor( SelectFor( player2Inputs.ReadInput(), p2)))
+        {
+            Debug.Log("P2 DONE");
+            Debug.Log(p2);
+        }*/
     }
 
-    AbstractManuscript SelectFor(Inputs inputs, AbstractManuscript manuscript)
+    bool SelectFor(Inputs inputs, List<int> selected)
     {
-        if(inputs.manuscript1)  manuscript = book.manuscripts[0];
-        if(inputs.manuscript2)  manuscript = book.manuscripts[1];
-        /*if(inputs.manuscript3)  manuscript = book.manuscripts[2];
-        if(inputs.manuscript4)  manuscript = book.manuscripts[3];
-        if(inputs.manuscript5)  manuscript = book.manuscripts[4];
-        if(inputs.manuscript6)  manuscript = book.manuscripts[5];
-        */
-        return manuscript;
+        int selection = -1;
+        if(inputs.manuscript1)       {selection=0;}
+        else if(inputs.manuscript2)  {selection=1;}
+        else if(inputs.manuscript3)  {selection=2;}
+        else if(inputs.manuscript4)  {selection=3;}
+        else if(inputs.manuscript5)  {selection=4;}
+        else if(inputs.manuscript6)  {selection=5;}
+        
+        if(selection != -1)
+        {
+            if(!selected.Contains(selection) && selected.Count < manuscriptsPerPlayer)
+            {
+                selected.Add(selection);
+            }
+        }
+
+        return selected.Count == manuscriptsPerPlayer;
     }
 }
