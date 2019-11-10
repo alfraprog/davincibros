@@ -5,13 +5,42 @@ using FMODUnity;
 
 public class AudioEngine : MonoBehaviour
 {
+    static Dictionary<string, FMOD.Studio.EventInstance> events = new Dictionary<string, FMOD.Studio.EventInstance>();
+
+
+    public static void PlaySound(string name)
+    {
+        //FMODUnity.RuntimeManager.LoadBank("SoundEffects", true);
+        
+
+        Debug.Log("This happened?? play sound");
+
+        if (!events.ContainsKey(name))
+        {
+
+                try
+                {
+                    FMOD.Studio.EventInstance instance = FMODUnity.RuntimeManager.CreateInstance(name);
+
+                    events.Add(name, instance);
+
+                }
+                catch (FMODUnity.EventNotFoundException e)
+                {
+                    Debug.LogWarning("Can't find FMOD event name " + name);
+                }
+        }
+
+        if (events.ContainsKey(name))
+            events[name].start();
+    }
 
     FMOD.Studio.EventInstance musicInstance;
 
     private int transitionValue = 0;
 
     [FMODUnity.EventRef]
-    public string gameSongEventName;
+    private string gameSongEventName = "event:/Gamemusic";
 
     public void ResetSong()
     {
