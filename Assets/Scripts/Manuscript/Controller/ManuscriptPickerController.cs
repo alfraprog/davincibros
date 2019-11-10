@@ -128,6 +128,27 @@ public class ManuscriptPickerController : MonoBehaviour
 
     private void End()
     {
+        if(p1.Count < manuscriptsPerPlayer)
+        {
+            SelectRandom(p1);
+        }
+        if(p2.Count < manuscriptsPerPlayer)
+        {
+            SelectRandom(p2);
+        }
         //GameManager.Instance.EndManuscriptSelectPhase();
+    }
+
+    private void SelectRandom(List<int> selected)
+    {
+        System.Random random = new System.Random();
+        while(selected.Count < manuscriptsPerPlayer)
+        {
+            int selection = random.Next(0, book.manuscripts.Count);
+            if(!selected.Contains(selection))
+            {
+                selected.Add(selection);
+            }
+        }
     }
 }
