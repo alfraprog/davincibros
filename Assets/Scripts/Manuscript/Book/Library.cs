@@ -24,7 +24,7 @@ public class Library : MonoBehaviour
         manuscripts.AddRange(weaponManuscripts);
         manuscripts.AddRange(flyingManuscripts);
         manuscripts.AddRange(propulsionManuscripts);
-        manuscripts.AddRange(armorManuscripts);
+        //manuscripts.AddRange(armorManuscripts);
 
         loaded=true;
     }

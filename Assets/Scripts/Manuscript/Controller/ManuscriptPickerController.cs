@@ -56,7 +56,7 @@ public class ManuscriptPickerController : MonoBehaviour
 
     public void PickInBook(Book book)
     {
-        float x = -360.0f;
+        float x = -380.0f;
         string[] buttons = {
             "Manuscripts/Backgrounds/button_a",
             "Manuscripts/Backgrounds/button_b",
@@ -72,12 +72,12 @@ public class ManuscriptPickerController : MonoBehaviour
             GameObject gameObject = Instantiate(manuscriptGameObject);
             ManuscriptController controller = gameObject.GetComponent<ManuscriptController>();
 
-            gameObject.transform.position = new Vector3(0.0f,0.0f,700.0f);
-            gameObject.transform.localScale = new Vector3(0.0f,0.0f,1.0f);
+            gameObject.transform.position = new Vector3(x,0.0f,700.0f);
+            gameObject.transform.localScale = new Vector3(0.5f,0.5f,1.0f);
             controller.FillWith(manuscript);
             controller.UseButton(buttons[i++]);
-            controller.AnimateTo(x, 0.5f, 400);
-            x += 180.0f; 
+            //controller.AnimateTo(x, 0.5f, 400);
+            x += 152.0f; 
         }
 
         p1 = new List<int>();
