@@ -24,6 +24,8 @@ public class BuildingController : MonoBehaviour
     {
         //TODO only for debugging! remove later and do via GameManager
         startBuildingPhase(2, manuscriptToBuild[0], manuscriptToBuild[1]);
+
+        
     }
 
     // Update is called once per frame
