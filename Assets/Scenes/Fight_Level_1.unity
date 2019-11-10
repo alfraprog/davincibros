@@ -1053,6 +1053,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16ba642dd0beeea4f8fe523c6679909e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  basicPropulsion: {fileID: 11400000, guid: 37e4392473db0354e8eaab068303bc99, type: 2}
   tanks: []
 --- !u!81 &1070888746
 AudioListener:

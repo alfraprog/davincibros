@@ -12,19 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ace2e440414cb9b9ab5f3f5b30b0c4f, type: 3}
   m_Name: Big Cannon
   m_EditorClassIdentifier: 
-  title: Heavy Canon
+  title: 
   description: 
   imagePath: Graphics/Craft_elements/graphicComponents_weapon_1_bigCannon
   backgroundPath: Manuscripts/Backgrounds/Template_card_weapon
   sprite: {fileID: 7640967437857235125, guid: 7600280b76bc41848b81563eb935837f, type: 3}
   type: 0
-  projectile: {fileID: 772059751735383936, guid: 8c1bcca792c163449a3a761a23d069fd,
-    type: 3}
-  muzzleVelocity: {x: 30, y: 0}
-  recoil: 3000
-  cooldown: 2
-  impactForce: 7000
-  powerful: 1
+  projectile: {fileID: 0}
+  muzzleVelocity: {x: 0, y: 0}
+  recoil: 0
+  cooldown: 0
+  impactForce: 0
+  powerful: 0
   playSound: 0
   fuseTime: 0
   explosionForce: 0
