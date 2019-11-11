@@ -6,24 +6,24 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Main.unity
+    path: Assets/_Scenes/Main.unity
     guid: 5c3f591543af66c40a6b0f858f25ea46
   - enabled: 1
-    path: Assets/Scenes/ManuscriptsPickScene.unity
+    path: Assets/_Scenes/ManuscriptsPickScene.unity
     guid: 7cd5ab35f3264e5f088be621709c70ac
   - enabled: 1
-    path: Assets/Scenes/PatrickBuildScene.unity
+    path: Assets/_Scenes/PatrickBuildScene.unity
     guid: b1e10195e57621f498a328bef6e3c999
   - enabled: 1
-    path: Assets/Scenes/Fight_Level_1.unity
+    path: Assets/_Scenes/Fight_Level_1.unity
     guid: 652b812d591ab3b40ace03477c3da87d
   - enabled: 1
-    path: Assets/Scenes/Fight_Level_2.unity
+    path: Assets/_Scenes/Fight_Level_2.unity
     guid: e27b8dc55cc942e46934492789b5da2a
   - enabled: 0
-    path: Assets/Scenes/AlexCardSelection.unity
+    path: Assets/_Scenes/AlexCardSelection.unity
     guid: fb9dec087012d3348b90b257f3a00a15
   - enabled: 0
-    path: Assets/Scenes/AlexBuildingScene.unity
+    path: Assets/_Scenes/AlexBuildingScene.unity
     guid: c05a8cb120c8bc345bdffdfdd21c596d
   m_configObjects: {}

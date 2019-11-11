@@ -612,6 +612,11 @@ PrefabInstance:
       propertyPath: player
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2095650890875751027, guid: d67a904cb91e305408d055e6b0306b98,
+        type: 3}
+      propertyPath: player
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d67a904cb91e305408d055e6b0306b98, type: 3}
 --- !u!1 &1070888743
@@ -659,6 +664,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16ba642dd0beeea4f8fe523c6679909e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  basicPropulsion: {fileID: 0}
   tanks: []
 --- !u!81 &1070888746
 AudioListener:

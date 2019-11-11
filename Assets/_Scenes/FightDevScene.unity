@@ -225,6 +225,12 @@ MonoBehaviour:
   jump: Jump_P2
   fire1: Fire1_P2
   fire2: Fire2_P2
+  manuscript1: Manuscript1_P1
+  manuscript2: Manuscript2_P1
+  manuscript3: Manuscript3_P1
+  manuscript4: Manuscript4_P1
+  manuscript5: Manuscript5_P1
+  manuscript6: Manuscript6_P1
 --- !u!1001 &702395067
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -330,11 +336,31 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: f0fa207a7251066458ca01cac692a460,
         type: 2}
-    - target: {fileID: 2451991436136760646, guid: d67a904cb91e305408d055e6b0306b98,
+    - target: {fileID: 2451991436436544656, guid: d67a904cb91e305408d055e6b0306b98,
         type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 1b0553d1b00554948810e24e30fe5ea3, type: 2}
+      propertyPath: force.y
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2451991436436544656, guid: d67a904cb91e305408d055e6b0306b98,
+        type: 3}
+      propertyPath: force.x
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 2451991436436544656, guid: d67a904cb91e305408d055e6b0306b98,
+        type: 3}
+      propertyPath: cooldown
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2451991436436544656, guid: d67a904cb91e305408d055e6b0306b98,
+        type: 3}
+      propertyPath: staminaUsage
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2451991436436544656, guid: d67a904cb91e305408d055e6b0306b98,
+        type: 3}
+      propertyPath: flyMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2451991435544946434, guid: d67a904cb91e305408d055e6b0306b98,
         type: 3}
       propertyPath: projectile
@@ -382,31 +408,16 @@ PrefabInstance:
       propertyPath: recoil
       value: 30
       objectReference: {fileID: 0}
-    - target: {fileID: 2451991436436544656, guid: d67a904cb91e305408d055e6b0306b98,
+    - target: {fileID: 2095650890875751027, guid: d67a904cb91e305408d055e6b0306b98,
         type: 3}
-      propertyPath: force.y
-      value: 5000
+      propertyPath: player
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2451991436436544656, guid: d67a904cb91e305408d055e6b0306b98,
+    - target: {fileID: 2451991436136760646, guid: d67a904cb91e305408d055e6b0306b98,
         type: 3}
-      propertyPath: force.x
-      value: 500
-      objectReference: {fileID: 0}
-    - target: {fileID: 2451991436436544656, guid: d67a904cb91e305408d055e6b0306b98,
-        type: 3}
-      propertyPath: cooldown
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2451991436436544656, guid: d67a904cb91e305408d055e6b0306b98,
-        type: 3}
-      propertyPath: staminaUsage
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 2451991436436544656, guid: d67a904cb91e305408d055e6b0306b98,
-        type: 3}
-      propertyPath: flyMode
-      value: 0
-      objectReference: {fileID: 0}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1b0553d1b00554948810e24e30fe5ea3, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d67a904cb91e305408d055e6b0306b98, type: 3}
 --- !u!1 &1070888743
@@ -453,6 +464,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16ba642dd0beeea4f8fe523c6679909e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  basicPropulsion: {fileID: 0}
   tanks: []
 --- !u!114 &1070888747
 MonoBehaviour:
@@ -466,6 +478,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26a1f47c4d5c0fc84be4b5745616471e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  loaded: 0
+  manuscripts: []
   weaponManuscripts: []
   flyingManuscripts: []
   propulsionManuscripts: []
@@ -492,6 +506,12 @@ MonoBehaviour:
   jump: Jump_P1
   fire1: Fire1_P1
   fire2: Fire2_P1
+  manuscript1: Manuscript1_P1
+  manuscript2: Manuscript2_P1
+  manuscript3: Manuscript3_P1
+  manuscript4: Manuscript4_P1
+  manuscript5: Manuscript5_P1
+  manuscript6: Manuscript6_P1
 --- !u!1 &1405026430
 GameObject:
   m_ObjectHideFlags: 0
@@ -856,11 +876,31 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: f0fa207a7251066458ca01cac692a460,
         type: 2}
-    - target: {fileID: 2451991436136760646, guid: d67a904cb91e305408d055e6b0306b98,
+    - target: {fileID: 2451991436436544656, guid: d67a904cb91e305408d055e6b0306b98,
         type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 575b5f630e8ee624ba2d8bf4685eb47a, type: 2}
+      propertyPath: force.y
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2451991436436544656, guid: d67a904cb91e305408d055e6b0306b98,
+        type: 3}
+      propertyPath: force.x
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 2451991436436544656, guid: d67a904cb91e305408d055e6b0306b98,
+        type: 3}
+      propertyPath: cooldown
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2451991436436544656, guid: d67a904cb91e305408d055e6b0306b98,
+        type: 3}
+      propertyPath: staminaUsage
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2451991436436544656, guid: d67a904cb91e305408d055e6b0306b98,
+        type: 3}
+      propertyPath: flyMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2451991435544946434, guid: d67a904cb91e305408d055e6b0306b98,
         type: 3}
       propertyPath: projectile
@@ -908,30 +948,10 @@ PrefabInstance:
       propertyPath: recoil
       value: 6000
       objectReference: {fileID: 0}
-    - target: {fileID: 2451991436436544656, guid: d67a904cb91e305408d055e6b0306b98,
+    - target: {fileID: 2451991436136760646, guid: d67a904cb91e305408d055e6b0306b98,
         type: 3}
-      propertyPath: force.y
-      value: 5000
-      objectReference: {fileID: 0}
-    - target: {fileID: 2451991436436544656, guid: d67a904cb91e305408d055e6b0306b98,
-        type: 3}
-      propertyPath: force.x
-      value: 500
-      objectReference: {fileID: 0}
-    - target: {fileID: 2451991436436544656, guid: d67a904cb91e305408d055e6b0306b98,
-        type: 3}
-      propertyPath: cooldown
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2451991436436544656, guid: d67a904cb91e305408d055e6b0306b98,
-        type: 3}
-      propertyPath: staminaUsage
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 2451991436436544656, guid: d67a904cb91e305408d055e6b0306b98,
-        type: 3}
-      propertyPath: flyMode
-      value: 0
-      objectReference: {fileID: 0}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 575b5f630e8ee624ba2d8bf4685eb47a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d67a904cb91e305408d055e6b0306b98, type: 3}

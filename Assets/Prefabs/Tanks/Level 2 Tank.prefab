@@ -145,7 +145,7 @@ GameObject:
   - component: {fileID: 2330893310425114818}
   - component: {fileID: 2330893310425114845}
   m_Layer: 0
-  m_Name: BottomRearWeapon
+  m_Name: LeftWeaponAttachment_L0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -233,7 +233,7 @@ GameObject:
   - component: {fileID: 2330893310659327989}
   - component: {fileID: 2330893310659327988}
   m_Layer: 0
-  m_Name: BottomFrontWeapon
+  m_Name: RightWeaponAttachment_L0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -320,7 +320,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2330893311450630398}
-  - component: {fileID: 2330893311450630371}
+  - component: {fileID: 4745390796381916867}
   - component: {fileID: 2330893311450630396}
   - component: {fileID: 2330893311450630397}
   m_Layer: 0
@@ -352,7 +352,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2330893311450630371
+--- !u!114 &4745390796381916867
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -361,23 +361,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 2330893311450630370}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 282594ce6f915384e800bf15b8733d96, type: 3}
+  m_Script: {fileID: 11500000, guid: c05d24d4a2d9493458501daaab9108fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: 0
   chassisMass: 1000
+  leftWeapons:
+  - {fileID: 2330893310425114845}
+  - {fileID: 4701157456732960870}
+  rightWeapons:
+  - {fileID: 2330893310659327988}
+  - {fileID: 4701157458491846112}
   armor: {fileID: 2330893310643202547}
   propulsion: {fileID: 2330893310702755026}
   flying: {fileID: 2330893309427551334}
+  leftWeaponManuscripts: []
+  rightWeaponManuscripts: []
   armorManuscript: {fileID: 0}
   propulsionManuscript: {fileID: 0}
   flyingManuscript: {fileID: 0}
-  bottomFrontWeapon: {fileID: 2330893310659327988}
-  topFrontWeapon: {fileID: 4701157458491846112}
-  frontWeaponManuscripts: []
-  bottomRearWeapon: {fileID: 2330893310425114845}
-  topRearWeapon: {fileID: 4701157456732960870}
-  rearWeaponManuscripts: []
 --- !u!65 &2330893311450630396
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -418,7 +420,7 @@ GameObject:
   - component: {fileID: 4701157456732960871}
   - component: {fileID: 4701157456732960870}
   m_Layer: 0
-  m_Name: TopRearWeapon
+  m_Name: LeftWeaponAttachment_L1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -462,7 +464,7 @@ GameObject:
   - component: {fileID: 4701157458491846113}
   - component: {fileID: 4701157458491846112}
   m_Layer: 0
-  m_Name: TopFrontWeapon
+  m_Name: RightWeaponAttachment_L1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

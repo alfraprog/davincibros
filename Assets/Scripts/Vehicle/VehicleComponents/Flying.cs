@@ -55,7 +55,14 @@ namespace TankComponents
 
             foreach (Transform child in transform)
             {
-                GameObject.Destroy(child.gameObject);
+                if (Application.isEditor)
+                {
+                    GameObject.DestroyImmediate(child.gameObject);
+                }
+                else
+                {
+                    GameObject.Destroy(child.gameObject);
+                }
             }
             if (manuscript.sprite)
             {

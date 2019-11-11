@@ -244,7 +244,7 @@ PrefabInstance:
     - target: {fileID: 2330893311450630370, guid: 3b14d1347ac2e0141ba8e09c14bbc5b8,
         type: 3}
       propertyPath: m_Name
-      value: Player 2 Tank
+      value: Player 1 Tank
       objectReference: {fileID: 0}
     - target: {fileID: 2330893311450630398, guid: 3b14d1347ac2e0141ba8e09c14bbc5b8,
         type: 3}
@@ -512,6 +512,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4745390796381916867, guid: 3b14d1347ac2e0141ba8e09c14bbc5b8,
+        type: 3}
+      propertyPath: player
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2330893311450630371, guid: 3b14d1347ac2e0141ba8e09c14bbc5b8,
         type: 3}

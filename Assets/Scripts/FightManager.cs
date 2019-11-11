@@ -7,12 +7,12 @@ using static GameManager;
 public class FightManager : MonoBehaviour
 {
     public PropulsionManuscript basicPropulsion;
-    public Tanks.AbstractTank[] tanks;
+    public Tanks.TankController[] tanks;
     // Start is called before the first frame update
     void Start()
     {
-        tanks = GameObject.FindObjectsOfType<Tanks.AbstractTank>();
-        foreach (Tanks.AbstractTank t in tanks)
+        tanks = GameObject.FindObjectsOfType<Tanks.TankController>();
+        foreach (Tanks.TankController t in tanks)
         {
 
 
@@ -24,30 +24,24 @@ public class FightManager : MonoBehaviour
                 SetupTank(t, GameManager.Instance.tankConfigP2);
             }
             t.SetFightManager(this);
-            t.Init();
+            t.InitComponents();
         }
         AudioEngine.PlaySound(Sounds.StartHorn);
     }
 
-    private void SetupTank(Tanks.AbstractTank tank, GameManager.TankConfig tconf)
+    private void SetupTank(Tanks.TankController tank, GameManager.TankConfig tconf)
     {
-        if (tank is Tanks.Level1Tank)
-            SetupTank1((Tanks.Level1Tank)tank, tconf);
-        if (tank is Tanks.Level2Tank)
-            SetupTank2((Tanks.Level2Tank)tank, tconf);
+        tank.armorManuscript = (ArmorManuscript)tconf.armor_L0;
 
-    }
+        tank.leftWeaponManuscripts = new WeaponManuscript[3];
+        tank.leftWeaponManuscripts[0] = (WeaponManuscript)tconf.weapon_L0_left;
+        tank.leftWeaponManuscripts[1] = (WeaponManuscript)tconf.weapon_L1_left;
+        tank.leftWeaponManuscripts[2] = (WeaponManuscript)tconf.weapon_L2_left;
 
-    private void SetupTank1(Tanks.Level1Tank tank, GameManager.TankConfig tconf)
-    {
-        if (tconf.armor_L0 != null) tank.armorManuscript = (ArmorManuscript)tconf.armor_L0;
-        if (tconf.armor_L1 != null) tank.armorManuscript = (ArmorManuscript)tconf.armor_L1;
-        if (tconf.armor_L2 != null) tank.armorManuscript = (ArmorManuscript)tconf.armor_L2;
-
-        tank.weaponManuscripts = new WeaponManuscript[2];
-        tank.weaponManuscripts[0] = (WeaponManuscript)tconf.weapon_L0_right;
-        tank.weaponManuscripts[1] = (WeaponManuscript)tconf.weapon_L0_left;
-
+        tank.rightWeaponManuscripts = new WeaponManuscript[3];
+        tank.rightWeaponManuscripts[0] = (WeaponManuscript)tconf.weapon_L0_right;
+        tank.rightWeaponManuscripts[1] = (WeaponManuscript)tconf.weapon_L1_right;
+        tank.rightWeaponManuscripts[2] = (WeaponManuscript)tconf.weapon_L2_right;
 
         tank.flyingManuscript = (FlyingManuscript)tconf.flight;
 
@@ -58,31 +52,7 @@ public class FightManager : MonoBehaviour
         {
             tank.propulsionManuscript = basicPropulsion;
         }
-    }
 
-    private void SetupTank2(Tanks.Level2Tank tank, GameManager.TankConfig tconf)
-    {
-        if (tconf.armor_L0 != null) tank.armorManuscript = (ArmorManuscript)tconf.armor_L0;
-        if (tconf.armor_L1 != null) tank.armorManuscript = (ArmorManuscript)tconf.armor_L1;
-        if (tconf.armor_L2 != null) tank.armorManuscript = (ArmorManuscript)tconf.armor_L2;
-
-        tank.frontWeaponManuscripts = new WeaponManuscript[2];
-        tank.frontWeaponManuscripts[0] = (WeaponManuscript)tconf.weapon_L0_right;
-        tank.frontWeaponManuscripts[1] = (WeaponManuscript)tconf.weapon_L1_right;
-
-        tank.rearWeaponManuscripts = new WeaponManuscript[2];
-        tank.rearWeaponManuscripts[0] = (WeaponManuscript)tconf.weapon_L0_left;
-        tank.rearWeaponManuscripts[1] = (WeaponManuscript)tconf.weapon_L1_left;
-
-        tank.flyingManuscript = (FlyingManuscript)tconf.flight;
-
-        if (tconf.wheel_left != null) tank.propulsionManuscript = (PropulsionManuscript)tconf.wheel_left;
-        if (tconf.wheel_right != null) tank.propulsionManuscript = (PropulsionManuscript)tconf.wheel_right;
-
-        if (tank.propulsionManuscript == null)
-        {
-            tank.propulsionManuscript = basicPropulsion;
-        }
     }
 
     // Update is called once per frame
@@ -91,7 +61,7 @@ public class FightManager : MonoBehaviour
         
     }
 
-    public void RegisterDeath(Tanks.AbstractTank tank)
+    public void RegisterDeath(Tanks.TankController tank)
     {
         tank.gameObject.SetActive(false);
         Debug.Log(tank.player + " died!");
