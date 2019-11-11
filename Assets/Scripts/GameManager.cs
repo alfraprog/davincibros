@@ -173,14 +173,11 @@ public class GameManager : Singleton<GameManager>
         fightStage++;
         if (fightStage >= randomFightScenes.Length)
         {
-            gamePhase = GamePhase.GameOver;
-            ResetSong();
+            fightStage = 0;
 
-        } else
-        {
-            gamePhase = GamePhase.Random;
         }
-        
+        gamePhase = GamePhase.Random;
+
         LoadSceneForGamePhase();
     }
 
