@@ -35,7 +35,8 @@ public class GameManager : Singleton<GameManager>
         ManuscriptSelect,
         Build,
         Fight,
-        GameOver
+        GameOver,
+        Random
     }
 
     public List<Book> selectedManuscripts = new List<Book>();
@@ -44,6 +45,8 @@ public class GameManager : Singleton<GameManager>
     public string buildingScene;
     public string[] fightScenes;
     public string gameOverScene;
+
+    public string[] randomFightScenes;
 
     public GamePhase gamePhase = GamePhase.ManuscriptSelect;
     public int fightStage = 0;
@@ -62,6 +65,13 @@ public class GameManager : Singleton<GameManager>
     public void StartGame() {
         gamePhase = GamePhase.ManuscriptSelect;
         TransitionSong();
+        LoadSceneForGamePhase();
+    }
+
+    public void StartRandomFightGame()
+    {
+        ForceFightSong();
+        gamePhase = GamePhase.Random;
         LoadSceneForGamePhase();
     }
 
@@ -87,6 +97,10 @@ public class GameManager : Singleton<GameManager>
             case GamePhase.GameOver:
                 SceneManager.LoadScene(gameOverScene);
                 break;
+            case GamePhase.Random:
+                SceneManager.LoadScene(randomFightScenes[fightStage]);
+                break;
+
         }
     }
 
@@ -96,6 +110,15 @@ public class GameManager : Singleton<GameManager>
         if (audioManger != null)
         {
             audioManger.GetComponent<AudioEngine>().TransitionSong();
+        }
+    }
+
+    public void ForceFightSong()
+    {
+        GameObject audioManger = GameObject.FindGameObjectWithTag("AudioManager");
+        if (audioManger != null)
+        {
+            audioManger.GetComponent<AudioEngine>().ForceGameSong();
         }
     }
 
@@ -131,7 +154,6 @@ public class GameManager : Singleton<GameManager>
     public void EndFightPhase(Player winner)
     {
         fightWinners.Add(winner);
-        //Todo persist any data in the GameManager
         fightStage++;
         if (fightStage >= fightScenes.Length)
         {
@@ -142,6 +164,23 @@ public class GameManager : Singleton<GameManager>
             gamePhase = GamePhase.ManuscriptSelect;
         }
         ResetSong();
+        LoadSceneForGamePhase();
+    }
+
+    public void EndRandomFightPhase(Player winner)
+    {
+        fightWinners.Add(winner);
+        fightStage++;
+        if (fightStage >= randomFightScenes.Length)
+        {
+            gamePhase = GamePhase.GameOver;
+            ResetSong();
+
+        } else
+        {
+            gamePhase = GamePhase.Random;
+        }
+        
         LoadSceneForGamePhase();
     }
 

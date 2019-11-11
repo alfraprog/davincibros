@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4899fb8b7d7bef541ba50690efb99baa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  randomFights: 0
 --- !u!114 &5633541720952343165
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63,7 +64,11 @@ MonoBehaviour:
   - Fight_level_1
   - Fight_level_2
   - Fight_level_3
-  gameOverScene: GameOverScene
+  gameOverScene: GameOver
+  randomFightScenes:
+  - Random_Fight_1
+  - Random_Fight_2
+  - Random_Fight_3
   gamePhase: 0
   fightStage: 0
   fightWinners: 

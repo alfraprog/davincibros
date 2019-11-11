@@ -29,4 +29,16 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/_Scenes/AlexBuildingScene.unity
     guid: c05a8cb120c8bc345bdffdfdd21c596d
+  - enabled: 1
+    path: Assets/_Scenes/RandomFights/Random_Fight_1.unity
+    guid: d0512bd2e377a964f9588ccaef09d439
+  - enabled: 1
+    path: Assets/_Scenes/RandomFights/Random_Fight_2.unity
+    guid: db4f975f04900fd468106602a99a08d5
+  - enabled: 1
+    path: Assets/_Scenes/RandomFights/Random_Fight_3.unity
+    guid: 1f68bf9090a4d8741aeff0d82d20246f
+  - enabled: 1
+    path: Assets/_Scenes/GameOver.unity
+    guid: e0036e39708d448419baf375c641ffdf
   m_configObjects: {}

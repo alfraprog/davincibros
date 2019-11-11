@@ -15,18 +15,26 @@ public class Library : MonoBehaviour
 
     void Start()
     {
-        weaponManuscripts = Resources.LoadAll<WeaponManuscript>("Manuscripts/Weapons");
-        flyingManuscripts = Resources.LoadAll<FlyingManuscript>("Manuscripts/Flying");
-        propulsionManuscripts = Resources.LoadAll<PropulsionManuscript>("Manuscripts/Propulsion");
-        armorManuscripts = Resources.LoadAll<ArmorManuscript>("Manuscripts/Armor");
-        
-        manuscripts = new List<AbstractManuscript>();
-        manuscripts.AddRange(weaponManuscripts);
-        manuscripts.AddRange(flyingManuscripts);
-        manuscripts.AddRange(propulsionManuscripts);
-        //manuscripts.AddRange(armorManuscripts);
+        LoadLibrary();
+    }
 
-        loaded=true;
+    public void LoadLibrary()
+    {
+        if (!loaded)
+        {
+            weaponManuscripts = Resources.LoadAll<WeaponManuscript>("Manuscripts/Weapons");
+            flyingManuscripts = Resources.LoadAll<FlyingManuscript>("Manuscripts/Flying");
+            propulsionManuscripts = Resources.LoadAll<PropulsionManuscript>("Manuscripts/Propulsion");
+            armorManuscripts = Resources.LoadAll<ArmorManuscript>("Manuscripts/Armor");
+
+            manuscripts = new List<AbstractManuscript>();
+            manuscripts.AddRange(weaponManuscripts);
+            manuscripts.AddRange(flyingManuscripts);
+            manuscripts.AddRange(propulsionManuscripts);
+            //manuscripts.AddRange(armorManuscripts);
+
+            loaded = true;
+        }
     }
 
     public Book RandomBook(int size)

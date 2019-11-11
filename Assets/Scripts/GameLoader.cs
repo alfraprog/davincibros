@@ -4,10 +4,18 @@ using UnityEngine;
 
 public class GameLoader : MonoBehaviour
 {
+    public bool randomFights;
     // Start is called before the first frame update
     void Start()
     {
-        GameManager.Instance.StartGame();
+        if (randomFights)
+        {
+            GameManager.Instance.StartRandomFightGame();
+        } else
+        {
+            GameManager.Instance.StartGame();
+        }
+
     }
 
     // Update is called once per frame

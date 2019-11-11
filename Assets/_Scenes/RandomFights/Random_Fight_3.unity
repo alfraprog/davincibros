@@ -932,9 +932,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1070888744}
-  - component: {fileID: 1070888745}
   - component: {fileID: 1070888746}
   - component: {fileID: 1070888747}
+  - component: {fileID: 1070888745}
   m_Layer: 0
   m_Name: FightManager
   m_TagString: GameController
@@ -965,10 +965,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1070888743}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16ba642dd0beeea4f8fe523c6679909e, type: 3}
+  m_Script: {fileID: 11500000, guid: 627ec5cc723aac9448a75678048457ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  basicPropulsion: {fileID: 11400000, guid: 37e4392473db0354e8eaab068303bc99, type: 2}
+  basicPropulsion: {fileID: 11400000, guid: 0f9e4b13c4045a846b63d5f925a4c848, type: 2}
   tanks: []
 --- !u!81 &1070888746
 AudioListener:

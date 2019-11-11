@@ -19,7 +19,8 @@ public class FightManager : MonoBehaviour
             if (t.player == Player.Player1)
             {
                 SetupTank(t, GameManager.Instance.tankConfigP1);
-            } else
+            }
+            else
             {
                 SetupTank(t, GameManager.Instance.tankConfigP2);
             }
@@ -61,8 +62,9 @@ public class FightManager : MonoBehaviour
         
     }
 
-    public void RegisterDeath(Tanks.TankController tank)
+    public virtual void RegisterDeath(Tanks.TankController tank)
     {
+        Debug.Log("Normal Fight manager register death");
         tank.gameObject.SetActive(false);
         Debug.Log(tank.player + " died!");
         Player winner = GetWinner(tank.player);

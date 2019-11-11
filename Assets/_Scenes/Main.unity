@@ -606,5 +606,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5633541720952343167, guid: ce6115203e5ca6b478c06079fd501bff,
+        type: 3}
+      propertyPath: randomFights
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce6115203e5ca6b478c06079fd501bff, type: 3}
