@@ -62,6 +62,7 @@ MonoBehaviour:
   fightScenes:
   - Fight_level_1
   - Fight_level_2
+  - Fight_level_3
   gameOverScene: GameOverScene
   gamePhase: 0
   fightStage: 0
