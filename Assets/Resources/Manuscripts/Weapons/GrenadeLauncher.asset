@@ -16,17 +16,6 @@ MonoBehaviour:
   description: 
   imagePath: Graphics/Craft_elements/graphicComponents_weapon_4_grenade
   backgroundPath: Manuscripts/Backgrounds/Template_card_weapon
-  sprite: {fileID: 9038774944981581938, guid: da9527839267d7743af51e5516df88b0, type: 3}
-  type: 1
-  projectile: {fileID: 7243662338941563626, guid: a883874183522a64b84108422d61231d,
+  sprite: {fileID: 0}
+  weaponPrefab: {fileID: 5770703010922401149, guid: da9527839267d7743af51e5516df88b0,
     type: 3}
-  muzzleVelocity: {x: 5, y: 1}
-  recoil: 200
-  cooldown: 3
-  impactForce: 0
-  powerful: 0
-  playSound: 0
-  fuseTime: 2
-  explosionForce: 8000
-  explosionRadius: 5
-  launchEffect: {fileID: 0}

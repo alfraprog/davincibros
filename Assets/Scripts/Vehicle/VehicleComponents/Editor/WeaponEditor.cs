@@ -8,7 +8,7 @@ namespace TankComponents
 {
     namespace Editor
     {
-        [CustomEditor(typeof(Weapon))]
+        [CustomEditor(typeof(WeaponAttachment))]
         public class WeaponEditor : UnityEditor.Editor
         {
             public override void OnInspectorGUI()
@@ -17,7 +17,7 @@ namespace TankComponents
 
                 DrawDefaultInspector();
 
-                Weapon weapon = (Weapon)target;
+                WeaponAttachment weapon = (WeaponAttachment)target;
 
                 if (weapon.manuscript)
                 {

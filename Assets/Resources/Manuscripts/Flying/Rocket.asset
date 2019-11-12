@@ -16,12 +16,6 @@ MonoBehaviour:
   description: 
   imagePath: Graphics/Craft_elements/graphicComponents_fly_3_rocket
   backgroundPath: Manuscripts/Backgrounds/Template_card_fly
-  sprite: {fileID: 8790480139576539577, guid: 4c4c3204d018e304db40e6d0ca22206d, type: 3}
-  flyMode: 2
-  force: {x: 0, y: 10000}
-  staminaUsage: 20
-  staminaRecoveryRate: 10
-  maxStamina: 100
-  cooldown: 10
-  rampUpTime: 0
-  sound: 0
+  sprite: {fileID: 0}
+  flyingPrefab: {fileID: 2458870746370894494, guid: 4c4c3204d018e304db40e6d0ca22206d,
+    type: 3}

@@ -14,11 +14,11 @@ namespace Tanks
 
         public float chassisMass;
 
-        public Weapon[] leftWeapons;
-        public Weapon[] rightWeapons;
+        public WeaponAttachment[] leftWeapons;
+        public WeaponAttachment[] rightWeapons;
         public Armor armor;
         public Propulsion propulsion;
-        public Flying flying;
+        public FlyingAttachment flying;
 
         public WeaponManuscript[] leftWeaponManuscripts;
         public WeaponManuscript[] rightWeaponManuscripts;
