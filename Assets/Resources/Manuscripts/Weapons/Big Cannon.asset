@@ -12,22 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ace2e440414cb9b9ab5f3f5b30b0c4f, type: 3}
   m_Name: Big Cannon
   m_EditorClassIdentifier: 
-  title: 
+  title: Big cannon
   description: 
   imagePath: Graphics/Craft_elements/graphicComponents_weapon_1_bigCannon
   backgroundPath: Manuscripts/Backgrounds/Template_card_weapon
-  sprite: {fileID: 7640967437857235125, guid: 7600280b76bc41848b81563eb935837f, type: 3}
-  type: 0
-  projectile: {fileID: 311066503278361764, guid: b349c83fb78cef544a041620dbde30ca,
-    type: 3}
-  muzzleVelocity: {x: 30, y: 0}
-  recoil: 3000
-  cooldown: 2
-  impactForce: 7000
-  powerful: 1
-  playSound: 1
-  fuseTime: 0
-  explosionForce: 0
-  explosionRadius: 0
-  launchEffect: {fileID: 7087636714957316009, guid: dcc87a2df1349d44ab641b6a5dc9e906,
+  sprite: {fileID: 0}
+  weaponPrefab: {fileID: 3016793231104277829, guid: 7600280b76bc41848b81563eb935837f,
     type: 3}
