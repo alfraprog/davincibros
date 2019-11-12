@@ -26,11 +26,10 @@ public class Grenade : MonoBehaviour
 
         if (fuseTime > 1f)
         {
-            fuseTime--;
-            yield return new WaitForSeconds(fuseTime);
+            yield return new WaitForSeconds(fuseTime - 1);
         }
         AudioEngine.PlaySound(Sounds.Swish);
-        yield return new WaitForSeconds(fuseTime);
+        yield return new WaitForSeconds(1);
         Explode();
     }
 
