@@ -7,37 +7,40 @@ namespace TankComponents
 {
     namespace Editor
     {
-        [CustomEditor(typeof(Flying))]
+        [CustomEditor(typeof(FlyingAttachment))]
         public class FlyingEditor : UnityEditor.Editor
         {
             public override void OnInspectorGUI()
             {
-                Flying flying = (Flying)target;
+                DrawDefaultInspector();
 
-                flying.flyMode = (Flying.FlyMode)EditorGUILayout.EnumPopup("Type", flying.flyMode);
-                flying.force = EditorGUILayout.Vector2Field("Force Vector", flying.force);
+                FlyingAttachment flying = (FlyingAttachment)target;
 
-                EditorGUILayout.Space();
-
-                flying.maxStamina = EditorGUILayout.FloatField("Max Stamina", flying.maxStamina);
-                flying.staminaUsage = EditorGUILayout.FloatField("Staminage usage", flying.staminaUsage);
-                flying.staminaRecoveryRate = EditorGUILayout.FloatField("Stamina recovery/s", flying.staminaRecoveryRate);
-                EditorGUILayout.LabelField("Current stamina: " + flying.currentStamina);
-
-                EditorGUILayout.Space();
-
-                if (flying.flyMode == Flying.FlyMode.Impulse || flying.flyMode == Flying.FlyMode.Continous)
+                if (flying.manuscript)
                 {
-                    flying.cooldown = EditorGUILayout.FloatField("Cooldown", flying.cooldown);
-                    EditorGUILayout.LabelField("Time until ready: " + flying.timeUntilReady);
+                    if (GUILayout.Button("Init Manuscript"))
+                    {
+                        flying.InitFromManuscript(flying.manuscript);
+                    }
                 }
-
-                if (flying.flyMode == Flying.FlyMode.RampUp)
+                if (flying.transform.childCount > 0)
                 {
-                    flying.rampUpTime = EditorGUILayout.FloatField("Ramp up time", flying.rampUpTime);
-                    EditorGUILayout.LabelField("Ramp up Force Multiplier: " + flying.rampupParameter);
+                    if (GUILayout.Button("Remove spawned sprites"))
+                    {
+                        foreach (Transform child in flying.transform)
+                        {
+                            if (Application.isEditor)
+                            {
+                                GameObject.DestroyImmediate(child.gameObject);
+                            }
+                            else
+                            {
+                                GameObject.Destroy(child.gameObject);
+                            }
+
+                        }
+                    }
                 }
-                EditorUtility.SetDirty(target);
 
             }
         }

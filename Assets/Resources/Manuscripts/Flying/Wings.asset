@@ -16,12 +16,6 @@ MonoBehaviour:
   description: Small wings
   imagePath: Graphics/Craft_elements/graphicComponents_fly_1_wing
   backgroundPath: Manuscripts/Backgrounds/Template_card_fly
-  sprite: {fileID: 6109993770149628137, guid: 720ae66ee45fcee468b3dd4cc777780b, type: 3}
-  flyMode: 0
-  force: {x: 0, y: 4000}
-  staminaUsage: 5
-  staminaRecoveryRate: 20
-  maxStamina: 100
-  cooldown: 0.5
-  rampUpTime: 0
-  sound: 2
+  sprite: {fileID: 0}
+  flyingPrefab: {fileID: 2792961382431699083, guid: 720ae66ee45fcee468b3dd4cc777780b,
+    type: 3}

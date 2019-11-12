@@ -18,7 +18,7 @@ namespace Tanks
         public WeaponAttachment[] rightWeapons;
         public Armor armor;
         public Propulsion propulsion;
-        public Flying flying;
+        public FlyingAttachment flying;
 
         public WeaponManuscript[] leftWeaponManuscripts;
         public WeaponManuscript[] rightWeaponManuscripts;

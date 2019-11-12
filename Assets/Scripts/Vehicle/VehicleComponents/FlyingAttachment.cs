@@ -4,12 +4,13 @@ using UnityEngine;
 
 namespace TankComponents
 {
-    public class WeaponAttachment : MonoBehaviour
+    public class FlyingAttachment : MonoBehaviour
     {
-        public WeaponManuscript manuscript;
-        private Weapons.AbstractWeapon weapon;
+        public FlyingManuscript manuscript;
 
-        public void InitFromManuscript(WeaponManuscript manuscript)
+        private Flying.AbstractFlying flying;
+
+        public void InitFromManuscript(FlyingManuscript manuscript)
         {
             if (manuscript)
             {
@@ -20,28 +21,26 @@ namespace TankComponents
                     if (Application.isEditor)
                     {
                         GameObject.DestroyImmediate(child.gameObject);
-                    } else
+                    }
+                    else
                     {
                         GameObject.Destroy(child.gameObject);
                     }
 
                 }
-                if (manuscript.weaponPrefab)
+                if (manuscript.flyingPrefab)
                 {
-                    weapon = GameObject.Instantiate(manuscript.weaponPrefab.gameObject, transform).GetComponent<Weapons.AbstractWeapon>();
+                    flying = GameObject.Instantiate(manuscript.flyingPrefab.gameObject, transform).GetComponent<Flying.AbstractFlying>();
                 }
             }
-
         }
 
-        public void Fire(Rigidbody body, bool input)
+        public void Fly(Rigidbody body, float input)
         {
-            if (weapon)
+            if (flying)
             {
-                weapon.Fire(body, transform, input);
+                flying.Fly(body, transform, input);
             }
-
-
 
         }
     }
